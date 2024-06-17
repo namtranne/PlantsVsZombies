@@ -28,7 +28,11 @@ public class PlantSlot : MonoBehaviour
     }
 
     private void BuyPlant() {
-        gameManager.BuyPlant(plantObject, plantSprite);
+        if (gameManager.suns >= price && !gameManager.currentPlant)
+        {
+            gameManager.suns -= price;
+            gameManager.BuyPlant(plantObject, plantSprite);
+        }
     }
 
     private void OnValidate() {

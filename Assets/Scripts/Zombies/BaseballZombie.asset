@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1f1c88c5d3480418e3dae6bd84b280, type: 3}
+  m_Name: BaseballZombie
+  m_EditorClassIdentifier: 
+  health: 16
+  speed: 0.007
+  damage: 2
+  range: 0.2
+  eatCooldown: 2
+  sprite: {fileID: -1852139586, guid: 072999b2656d92b409bef507cc9bd32b, type: 3}
+  eatAnimation: {fileID: 9100000, guid: d1eca98f33905df409a70cc1e7633684, type: 2}
+  deathAnimation: {fileID: 9100000, guid: c6806b2d979d5314d93f1a9fcecd7ded, type: 2}
+  animator: {fileID: 9100000, guid: 870efd5c5e88fbb42a433aaf30abcd69, type: 2}
+  hitClips:
+  - {fileID: 8300000, guid: 9f0ec8d8227b7d1418b0faf761fef047, type: 3}
+  - {fileID: 8300000, guid: 691e56691ece8b34895f28164d7860fe, type: 3}

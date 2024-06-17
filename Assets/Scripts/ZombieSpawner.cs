@@ -1,36 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ZombieSpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject zombie;
-    private int sortingOrder = 0;
+    private int sortingOrder = 1;
+    public ZombieTypeProb[] zombieTypes;
+
+    private List<ZombieTypes> probList = new List<ZombieTypes>();
+
+    public int zombieMax;
+    public int zombiesSpawned;
+    public int zombiesKilled;
+    public Slider progressBar;
+    public float zombieDelay = 5;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        InvokeRepeating("SpawnZombie", 10, 1);
+        InvokeRepeating("SpawnZombie", 10, zombieDelay);
+
+        foreach (ZombieTypeProb zom in zombieTypes)
+            for (int i = 0; i < zom.probability; i++)
+                probList.Add(zom.type);
+
+        progressBar.maxValue = zombieMax;
     }
 
-    void SpawnZombie() 
+    private void Update()
     {
+        progressBar.value = zombiesSpawned;
+    }
+
+
+
+    void SpawnZombie()
+    {
+        if (zombiesSpawned >= zombieMax) return;
+        zombiesSpawned++;
         int spawnPosition = Random.Range(0, spawnPoints.Length);
         GameObject myZombie = Instantiate(zombie, spawnPoints[spawnPosition].position, Quaternion.identity);
 
-        // Get the SpriteRenderer component and set the sortingOrder
-        SpriteRenderer renderer = myZombie.GetComponent<SpriteRenderer>();
-        if (renderer != null)
-        {
-            renderer.sortingOrder = sortingOrder;
-            sortingOrder++; // Increment the sortingOrder for the next zombie
-        }
+        myZombie.GetComponent<Zombie>().type = probList[Random.Range(0, probList.Count)];
+        myZombie.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+}
+[System.Serializable]
+public class ZombieTypeProb
+{
+    public ZombieTypes type;
+    public int probability;
 }
