@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 3
+  lane: 0
 --- !u!61 &14330036
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1024,7 +1024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 4
+  lane: 0
 --- !u!61 &95213837
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2262,7 +2262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 4
+  lane: 0
 --- !u!61 &340054251
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2640,7 +2640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 3
+  lane: 0
 --- !u!61 &372270948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2976,7 +2976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 2
+  lane: 0
 --- !u!61 &401301302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3565,7 +3565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 1
+  lane: 0
 --- !u!61 &508210225
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3714,7 +3714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 1286455380}
+  background: {fileID: 0}
   plantImage: {fileID: 649664091}
   plantSprite: {fileID: -482353601, guid: deacc92377ede574b8a7ecfe79dff6ed, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: 060425111e7aaeb4596ccc29f188a259, type: 3}
@@ -3901,7 +3901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 4
+  lane: 0
 --- !u!61 &548201577
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4629,7 +4629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 1
+  lane: 0
 --- !u!61 &673064680
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4774,7 +4774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 2
+  lane: 0
 --- !u!61 &677687780
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4950,7 +4950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 2
+  lane: 0
 --- !u!61 &686360800
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5095,7 +5095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 2
+  lane: 0
 --- !u!61 &691531318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5784,7 +5784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 3
+  lane: 0
 --- !u!61 &773187839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6386,7 +6386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 1
+  lane: 0
 --- !u!61 &851797064
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6533,7 +6533,7 @@ MonoBehaviour:
   zombiesSpawned: 0
   zombiesKilled: 0
   progressBar: {fileID: 350967275}
-  zombieDelay: 1
+  zombieDelay: 0.5
 --- !u!4 &862809827
 Transform:
   m_ObjectHideFlags: 0
@@ -6671,7 +6671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 2
+  lane: 0
 --- !u!61 &870283293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6847,7 +6847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 4
+  lane: 0
 --- !u!61 &937265866
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6992,7 +6992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 3
+  lane: 0
 --- !u!61 &976591162
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7137,7 +7137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 3
+  lane: 0
 --- !u!61 &990615859
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7282,7 +7282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 2
+  lane: 0
 --- !u!61 &1043938696
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7427,7 +7427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 3
+  lane: 0
 --- !u!61 &1051669467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7761,7 +7761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 4
+  lane: 0
 --- !u!61 &1066579204
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7906,7 +7906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 1
+  lane: 0
 --- !u!61 &1072040406
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8434,7 +8434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 4
+  lane: 0
 --- !u!61 &1193109053
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8579,7 +8579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 1
+  lane: 0
 --- !u!61 &1203406863
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8856,7 +8856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 3
+  lane: 0
 --- !u!61 &1288589493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9135,7 +9135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 2
+  lane: 0
 --- !u!61 &1329688519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10002,7 +10002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 4
+  lane: 0
 --- !u!61 &1553290003
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10147,7 +10147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 4
+  lane: 0
 --- !u!61 &1561586698
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10466,7 +10466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 1
+  lane: 0
 --- !u!61 &1615437153
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11040,7 +11040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 3
+  lane: 0
 --- !u!61 &1682082697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11319,7 +11319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 3
+  lane: 0
 --- !u!61 &1717493402
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11642,7 +11642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 1396915343}
+  background: {fileID: 0}
   plantImage: {fileID: 1909382584}
   plantSprite: {fileID: -1446662354, guid: 96461538dffeec14eae61e8a0425409c, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: 1a5f6b27a11a7e547af349b68233e3e7, type: 3}
@@ -11950,7 +11950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 1
+  lane: 0
 --- !u!61 &1836602906
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12095,7 +12095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 2
+  lane: 0
 --- !u!61 &1858154947
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12385,7 +12385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 4
+  lane: 0
 --- !u!61 &1888864145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12796,7 +12796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 1
+  lane: 0
 --- !u!61 &1955000500
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13091,7 +13091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 2
+  lane: 0
 --- !u!61 &1998855917
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13427,7 +13427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPlant: 0
-  lane: 1
+  lane: 0
 --- !u!61 &2140847685
 BoxCollider2D:
   m_ObjectHideFlags: 0

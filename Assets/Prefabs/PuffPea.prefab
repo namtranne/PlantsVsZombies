@@ -103,7 +103,7 @@ MonoBehaviour:
   speed: 6
   freeze: 0
   direction: 2
-  angle: 0.03490658
+  laneWidth: 0
 --- !u!50 &-4993878501252284211
 Rigidbody2D:
   serializedVersion: 4

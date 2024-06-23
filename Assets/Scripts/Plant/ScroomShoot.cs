@@ -76,10 +76,10 @@ public class ScroomShoot : MonoBehaviour
     void diagonalBullet()
     {
         GameObject leftBullet = Instantiate(bullet, shootOrigin.position, Quaternion.identity);
-        leftBullet.GetComponent<Bullet>().direction = BulletDirection.Left;
+        leftBullet.GetComponent<Bullet>().direction = BulletDirection.Top;
 
         GameObject rightBullet = Instantiate(bullet, shootOrigin.position, Quaternion.identity);
-        rightBullet.GetComponent<Bullet>().direction = BulletDirection.Right;
+        rightBullet.GetComponent<Bullet>().direction = BulletDirection.Bottom;
     }
 
 }
