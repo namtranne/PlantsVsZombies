@@ -2,47 +2,60 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class PlantSlot : MonoBehaviour
+public class PlantSlot : MonoBehaviour, IPointerDownHandler
 {
-
+    public Image background;
     public Image plantImage;
     public Sprite plantSprite;
     public GameObject plantObject;
     public TextMeshProUGUI priceText;
     public int price;
     private GameManager gameManager;
+    private bool isDragging = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        GetComponent<Button>().onClick.AddListener(BuyPlant);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void BuyPlant() {
-        if (gameManager.suns >= price && !gameManager.currentPlant)
+        if (gameManager.suns >= price)
         {
-            gameManager.suns -= price;
-            gameManager.BuyPlant(plantObject, plantSprite);
+            background.color = Color.white;
+            plantImage.color = Color.white;
+        }
+        else
+        {
+            background.color = Color.gray;
+            plantImage.color = Color.gray;
         }
     }
 
-    private void OnValidate() {
-        if(plantSprite) {
+    private void OnValidate()
+    {
+        if (plantSprite)
+        {
             plantImage.sprite = plantSprite;
             plantImage.enabled = true;
             priceText.text = price.ToString();
         }
-        else {
+        else
+        {
             plantImage.enabled = false;
+        }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (gameManager.suns >= price && !gameManager.currentPlant)
+        {
+            gameManager.ChoosePlant(plantObject, plantSprite, price);
+            gameManager.StartDragging();
+            isDragging = true;
         }
     }
 }

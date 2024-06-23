@@ -4,14 +4,15 @@ using UnityEngine;
 
 public enum BulletDirection
 {
-    Left,
-    Right,
-    Straight
+    Top,
+    Bottom,
+    Straight,
+    Behind
 }
 
 public class Bullet : MonoBehaviour
 {
-    public int damage;
+    public float damage;
 
     public float speed = 2f;
 
@@ -19,11 +20,16 @@ public class Bullet : MonoBehaviour
 
     public BulletDirection direction = BulletDirection.Straight;
 
-    public float angle = Mathf.Deg2Rad * 2f;
+    private float angle = Mathf.Deg2Rad * 75f;
+
+    public float laneWidth;
+
+    private Vector3 shootOrigin;
 
     private void Start()
     {
-        Destroy(gameObject, 10);
+        shootOrigin = transform.position;
+        Destroy(gameObject, 3);
     }
 
     // Update is called once per frame
@@ -31,14 +37,22 @@ public class Bullet : MonoBehaviour
     {
         switch (direction)
         {
-            case BulletDirection.Left:
-                transform.position += new Vector3(speed * Time.deltaTime, Mathf.Sin(angle) * speed * Time.deltaTime, 0);
-                break;
-            case BulletDirection.Right:
-                transform.position += new Vector3(speed * Time.deltaTime, Mathf.Sin(-angle) * speed * Time.deltaTime, 0);
-                break;
             case BulletDirection.Straight:
                 transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+                break;
+            case BulletDirection.Top:
+                transform.position += new Vector3(speed * Time.deltaTime, Mathf.Sin(angle) * speed * Time.deltaTime, 0);
+                if (transform.position.y - shootOrigin.y >= laneWidth)
+                {
+                    direction = BulletDirection.Straight;
+                }
+                break;
+            case BulletDirection.Bottom:
+                transform.position += new Vector3(speed * Time.deltaTime, Mathf.Sin(-angle) * speed * Time.deltaTime, 0);
+                if (shootOrigin.y - transform.position.y >= laneWidth) direction = BulletDirection.Straight;
+                break;
+            case BulletDirection.Behind:
+                transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
                 break;
         }
     }

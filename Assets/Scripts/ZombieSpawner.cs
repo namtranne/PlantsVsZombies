@@ -7,7 +7,7 @@ public class ZombieSpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject zombie;
-    private int sortingOrder = 1;
+    private int sortingOrder = 2;
     public ZombieTypeProb[] zombieTypes;
 
     private List<ZombieTypes> probList = new List<ZombieTypes>();
@@ -21,7 +21,7 @@ public class ZombieSpawner : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        InvokeRepeating("SpawnZombie", 10, zombieDelay);
+        InvokeRepeating("SpawnZombie", 2, zombieDelay);
 
         foreach (ZombieTypeProb zom in zombieTypes)
             for (int i = 0; i < zom.probability; i++)

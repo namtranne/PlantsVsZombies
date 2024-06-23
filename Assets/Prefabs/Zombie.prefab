@@ -30,11 +30,12 @@ Transform:
   m_GameObject: {fileID: 4419244606155348726}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.99, y: -0.01, z: 0}
-  m_LocalScale: {x: 1.3575177, y: 1.3720499, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.04}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6659237298742903439}
+  - {fileID: 3297460264581547886}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8732878982696024592
@@ -77,8 +78,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -1852139586, guid: 072999b2656d92b409bef507cc9bd32b, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 77a7f83d48a086e4ba893b2f37848ead, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,10 +102,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ca3a9dd86dd4f3bb05010eabcb9d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
   plantMask:
     serializedVersion: 2
     m_Bits: 512
-  type: {fileID: 11400000, guid: 7e4906cd45370134d85edf4780b28cc0, type: 2}
+  type: {fileID: 11400000, guid: 5662c5005345513408ccb549a06eb1ff, type: 2}
+  curAnimation: walking
   targetPlant: {fileID: 0}
   groans:
   - {fileID: 8300000, guid: 9b91a8a5f28a5b743a80437d2c94fa52, type: 3}
@@ -115,6 +118,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4368091a399ad2645ad0cedc079d4d7b, type: 3}
   eatSource: {fileID: 2126219092788410673}
   eatClip: {fileID: 8300000, guid: 57f5af2c054ca19479c18c3b75e32fdb, type: 3}
+  trapPosition: {fileID: 3297460264581547886}
+  frozenTrap: {fileID: 6959242291675946222, guid: d1f9771daa0095f4fb7fc0adae687d0f, type: 3}
+  boomAnimation: {fileID: 9100000, guid: ad5d6a2884acbb14caa3d5b62bdc0407, type: 2}
 --- !u!95 &5397919651543444758
 Animator:
   serializedVersion: 5
@@ -168,18 +174,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.22100985, y: -0.046857595}
+  m_Offset: {x: 0.25, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.54, y: 1.6}
+    oldSize: {x: 1.66, y: 1.44}
     newSize: {x: 1.66, y: 1.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.90225124, y: 1.3462849}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!82 &5781578443025812554
 AudioSource:
@@ -277,6 +283,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &7143527290421949981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3297460264581547886}
+  m_Layer: 7
+  m_Name: FrozenTrap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3297460264581547886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7143527290421949981}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.248, y: -0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4375051081827643467}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7915595367899286578
 GameObject:
   m_ObjectHideFlags: 0

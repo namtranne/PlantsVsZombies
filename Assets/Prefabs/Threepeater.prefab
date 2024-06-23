@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7493214335083761587}
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2695493775353874002, guid: 119d12608b5526844bd3052e0b5ef47d, type: 3}
   shootOrigin: {fileID: 7493214335083761587}
-  cooldown: 3.5
+  cooldown: 1
   range: 12
   isRepeater: 0
   isThreepeater: 1
@@ -134,7 +134,6 @@ MonoBehaviour:
   shootClips:
   - {fileID: 8300000, guid: f5049ea837e4e3f4fbe46fe0d893bb18, type: 3}
   - {fileID: 8300000, guid: ba4f80f2f1a50754198e53aab2954502, type: 3}
-  angleOffset: 30
 --- !u!114 &3268109216912756460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  tile: {fileID: 0}
 --- !u!61 &3099833876102898989
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -184,14 +184,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.73, y: 0.8}
+    oldSize: {x: 1.46, y: 1.6}
     newSize: {x: 0.7, y: 0.72}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.73, y: 0.8}
+  m_Size: {x: 1.46, y: 1.6}
   m_EdgeRadius: 0
 --- !u!1 &8902536834738800360
 GameObject:
@@ -218,7 +218,7 @@ Transform:
   m_GameObject: {fileID: 8902536834738800360}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0, z: 0}
+  m_LocalPosition: {x: 0.4, y: 0.25, z: 0}
   m_LocalScale: {x: 1.0071, y: 1.0071, z: 1.0071}
   m_ConstrainProportionsScale: 0
   m_Children: []

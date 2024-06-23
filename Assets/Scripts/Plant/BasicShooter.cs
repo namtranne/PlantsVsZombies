@@ -16,16 +16,19 @@ public class BasicShooter : MonoBehaviour
 
     public bool isThreepeater;
 
+    public bool isSplit;
+
+    public bool isGaling;
+
     public LayerMask shootMask;
 
     private bool canShoot;
 
-    private GameObject target;
-
     public AudioClip[] shootClips;
 
     private AudioSource shootSource;
-    public float angleOffset = 30f;
+
+    private float laneWidth = 1.66f;
     private void Start()
     {
         shootSource = gameObject.AddComponent<AudioSource>();
@@ -36,11 +39,23 @@ public class BasicShooter : MonoBehaviour
     private void Update()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, range, shootMask);
-        if(hit.collider)
+        if(hit.collider) Shoot();
+        else if (isThreepeater)
         {
-            target = hit.collider.gameObject;
-            Shoot();
-        }     
+            hit = Physics2D.Raycast(transform.position + new Vector3(0, laneWidth, 0), Vector2.right, range, shootMask);
+            if (hit.collider)
+            {
+                Shoot();
+                return;
+            }
+            hit = Physics2D.Raycast(transform.position - new Vector3(0, laneWidth, 0), Vector2.right, range, shootMask);
+            if (hit.collider) Shoot();
+        }
+        else if (isSplit)
+        {
+            hit = Physics2D.Raycast(transform.position, Vector2.left, range, shootMask);
+            if (hit.collider) Shoot();
+        }
     }
 
     void ResetCooldown()
@@ -59,25 +74,36 @@ public class BasicShooter : MonoBehaviour
 
         straightBullet();
         if (isRepeater)
-            Invoke("straightBullet", .12f);
+            Invoke("straightBullet", .1f);
         if (isThreepeater)
         {
             diagonalBullet();
+        }
+        if (isSplit)
+        {
+            GameObject behindBullet = Instantiate(bullet, shootOrigin.position, Quaternion.identity);
+            behindBullet.GetComponent<Bullet>().direction = BulletDirection.Behind;
+        }
+        if (isGaling)
+        {
+            Invoke("straightBullet", .1f);
+            Invoke("straightBullet", .2f);
+            Invoke("straightBullet", .3f);
         }
     }
 
     void straightBullet()
     {
-        GameObject myBullet = Instantiate(bullet, shootOrigin.position, Quaternion.identity);
+        Instantiate(bullet, shootOrigin.position, Quaternion.identity);
     }
 
     void diagonalBullet()
     {
         GameObject leftBullet = Instantiate(bullet, shootOrigin.position, Quaternion.identity);
-        leftBullet.GetComponent<Bullet>().direction = BulletDirection.Left;
+        leftBullet.GetComponent<Bullet>().direction = BulletDirection.Top;
 
         GameObject rightBullet = Instantiate(bullet, shootOrigin.position, Quaternion.identity);
-        rightBullet.GetComponent<Bullet>().direction = BulletDirection.Right;
+        rightBullet.GetComponent<Bullet>().direction = BulletDirection.Bottom;
     }
 
 }
