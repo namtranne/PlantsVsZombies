@@ -6,6 +6,8 @@ public class Sun : MonoBehaviour
 {
     public float dropToYPos;
     private float speed = 0.1f;
+    public int value;
+
     // Start is called before the first frame update
     private void Start()
     {

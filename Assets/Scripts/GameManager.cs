@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
             {
                 sunSource.pitch = UnityEngine.Random.Range(.9f, 1.1f);
                 sunSource.PlayOneShot(sunSFX);
-                suns += 25;
+                suns += sunHit.collider.gameObject.GetComponent<Sun>().value;
                 Destroy(sunHit.collider.gameObject);
             }
         }

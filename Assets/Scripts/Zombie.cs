@@ -105,6 +105,30 @@ public class Zombie : MonoBehaviour
             }
         }
     }
+
+    public void BeBited(float delay = 0)
+    {
+        Destroy(gameObject, delay);
+        ZombieSpawner zombieSpawner = GameObject.Find("ZombieSpawner").GetComponent<ZombieSpawner>();
+        zombieSpawner.zombiesKilled++;
+        if (zombieSpawner.zombiesKilled >= zombieSpawner.zombieMax)
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().Win();
+        }
+    }
+
+    public void BeSmashed(float delay = 0)
+    {
+        GetComponent<Animator>().runtimeAnimatorController = type.deathAnimation;
+        Destroy(gameObject, delay);
+        ZombieSpawner zombieSpawner = GameObject.Find("ZombieSpawner").GetComponent<ZombieSpawner>();
+        zombieSpawner.zombiesKilled++;
+        if (zombieSpawner.zombiesKilled >= zombieSpawner.zombieMax)
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().Win();
+        }
+    }
+
     void Freeze()
     {
         CancelInvoke("UnFreeze");
