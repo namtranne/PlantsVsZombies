@@ -45,6 +45,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Collide");
         if (other.TryGetComponent<Zombie>(out Zombie zombie))
         {
             zombie.Hit(damage, freeze);
