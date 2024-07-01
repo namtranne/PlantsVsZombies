@@ -117,4 +117,8 @@ public class Zombie : MonoBehaviour
         GetComponent<SpriteRenderer>().color = Color.white;
         speed = type.speed;
     }
+
+    public int GetHealth() {
+        return health;
+    }
 }

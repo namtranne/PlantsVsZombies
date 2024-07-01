@@ -39,7 +39,6 @@ public class PlantSlot : MonoBehaviour
         if(plantSprite) {
             plantImage.sprite = plantSprite;
             plantImage.enabled = true;
-            priceText.text = price.ToString();
         }
         else {
             plantImage.enabled = false;

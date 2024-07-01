@@ -8,6 +8,7 @@ using TMPro;
 public class BowlingGameManager : MonoBehaviour
 {
     public GameObject currentPlant;
+    public GameObject currentSelectedSlot;
     public Sprite currentPlantSprite;
     public Transform tiles;
     public LayerMask tileMask;
@@ -22,9 +23,10 @@ public class BowlingGameManager : MonoBehaviour
     }
 
 
-    public void BuyPlant(GameObject plant, Sprite sprite) {
+    public void BuyPlant(GameObject plant, Sprite sprite, GameObject gameObject) {
         currentPlant = plant;
         currentPlantSprite = sprite;
+        currentSelectedSlot = gameObject;
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class BowlingGameManager : MonoBehaviour
             hit.collider.GetComponent<SpriteRenderer>().enabled = true;
             if(Input.GetMouseButtonDown(0) && !hit.collider.GetComponent<Tile>().hasPlant) {
                 Plant(hit.collider.gameObject);
+                Destroy(currentSelectedSlot);
             }
         }
 

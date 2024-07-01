@@ -21,18 +21,18 @@ public class ZombieSpawner : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        InvokeRepeating("SpawnZombie", 10, zombieDelay);
+        // InvokeRepeating("SpawnZombie", 10, zombieDelay);
 
-        foreach (ZombieTypeProb zom in zombieTypes)
-            for (int i = 0; i < zom.probability; i++)
-                probList.Add(zom.type);
+        // foreach (ZombieTypeProb zom in zombieTypes)
+        //     for (int i = 0; i < zom.probability; i++)
+        //         probList.Add(zom.type);
 
-        progressBar.maxValue = zombieMax;
+        // progressBar.maxValue = zombieMax;
     }
 
     private void Update()
     {
-        progressBar.value = zombiesSpawned;
+        // progressBar.value = zombiesSpawned;
     }
 
 
