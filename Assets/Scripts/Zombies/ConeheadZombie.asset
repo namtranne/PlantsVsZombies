@@ -15,7 +15,7 @@ MonoBehaviour:
   health: 16
   speed: 0.005
   damage: 2
-  range: 0.2
+  range: 0
   eatCooldown: 2
   sprite: {fileID: 21300000, guid: 77a7f83d48a086e4ba893b2f37848ead, type: 3}
   eatAnimation: {fileID: 9100000, guid: 508fa5ac4bfc8eb4ca3db56c32d6543c, type: 2}

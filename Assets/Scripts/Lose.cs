@@ -21,7 +21,7 @@ public class Lose : MonoBehaviour
     {
         if (other.gameObject.layer == 7)
         {
-            if (hasLost) return;
+            if (hasLost || other.GetComponent<Zombie>().curAnimation == "death") return;
             hasLost = true;
             source.PlayOneShot(loseMusic);
             source.PlayOneShot(scream);

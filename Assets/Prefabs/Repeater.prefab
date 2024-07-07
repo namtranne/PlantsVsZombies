@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1709078689601260339}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.441, y: 0.256, z: 0}
+  m_LocalPosition: {x: 0.45, y: 0.25, z: 0}
   m_LocalScale: {x: 1.0071, y: 1.0071, z: 1.0071}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -62,7 +62,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.0272, y: -0.0543, z: 0}
-  m_LocalScale: {x: 1.468436, y: 1.8582822, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7870080111447989257}
@@ -155,9 +155,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2695493775353874002, guid: 119d12608b5526844bd3052e0b5ef47d, type: 3}
   shootOrigin: {fileID: 7870080111447989257}
-  cooldown: 4
+  cooldown: 1
   range: 12
   isRepeater: 1
+  isThreepeater: 0
   shootMask:
     serializedVersion: 2
     m_Bits: 128
@@ -177,6 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  tile: {fileID: 0}
 --- !u!61 &3099833876102898989
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -213,12 +215,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7294118, y: 0.7058824}
+    oldSize: {x: 1.3777778, y: 1.3333334}
     newSize: {x: 0.7, y: 0.72}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7294118, y: 0.7058824}
+  m_Size: {x: 1.3777778, y: 1.3333334}
   m_EdgeRadius: 0

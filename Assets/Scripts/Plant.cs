@@ -6,12 +6,15 @@ public class Plant : MonoBehaviour
 {
     public int health;
 
+    public Tile tile;
+
     public void Hit(int damage)
     {
         health -= damage;
         if (health <= 0)
         {
-            Destroy(gameObject, .1f);
+            tile.hasPlant = false;
+            Destroy(gameObject);
         }
     }
 
