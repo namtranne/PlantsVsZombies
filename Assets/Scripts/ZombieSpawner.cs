@@ -55,6 +55,7 @@ public class ZombieSpawner : MonoBehaviour
 
     void SpawnZombie()
     {
+        if (GameManager.isPaused) return;
         int percentage = zombiesSpawned / zombieMax;
         if (percentage >= 1) return;
         if (zombiesSpawned <= 6)

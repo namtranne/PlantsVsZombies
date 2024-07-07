@@ -21,6 +21,18 @@ public class GameManager : MonoBehaviour
     private AudioSource plantSource;
     public AudioSource sunSource;
 
+    public static bool isPaused = false;
+
+    public static void StopPausing()
+    {
+        isPaused = false;
+    }
+
+    public static void Pausing()
+    {
+        isPaused = true;
+    }
+
     private bool isDragging = false;
     private GameObject draggedPlantInstance;
     private int currentPlantPrice;
@@ -41,6 +53,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (isPaused) return;
+
         sunText.text = suns.ToString();
 
         if (isDragging && currentPlant)
