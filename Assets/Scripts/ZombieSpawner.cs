@@ -52,8 +52,6 @@ public class ZombieSpawner : MonoBehaviour
             zombieTypes[i].probability /= totalWeight;
         }
     }
-        progressBar.value = zombiesSpawned;
-    }
 
     void SpawnZombie()
     {
