@@ -52,9 +52,12 @@ public class ZombieSpawner : MonoBehaviour
             zombieTypes[i].probability /= totalWeight;
         }
     }
+        progressBar.value = zombiesSpawned;
+    }
 
     void SpawnZombie()
     {
+        if (GameManager.isPaused) return;
         int percentage = zombiesSpawned / zombieMax;
         if (percentage >= 1) return;
         if (zombiesSpawned <= 6)

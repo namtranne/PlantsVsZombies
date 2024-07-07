@@ -50,6 +50,8 @@ public class Zombie : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.isPaused) return;
+
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, range, plantMask);
         if(hit.collider)
         {
@@ -86,6 +88,8 @@ public class Zombie : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
+        if (GameManager.isPaused) return;
+
         // Move the zombie to the left
         if (curAnimation == "walking")
             transform.position -= new Vector3(speed, 0, 0);
