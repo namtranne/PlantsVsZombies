@@ -35,10 +35,9 @@ public class ZombieSpawner : MonoBehaviour
         progressBar.value = zombiesSpawned;
     }
 
-
-
     void SpawnZombie()
     {
+        if (GameManager.isPaused) return;
         if (zombiesSpawned >= zombieMax) return;
         zombiesSpawned++;
         int spawnPosition = Random.Range(0, spawnPoints.Length);

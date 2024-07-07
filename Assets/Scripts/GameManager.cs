@@ -20,6 +20,18 @@ public class GameManager : MonoBehaviour
     private AudioSource plantSource;
     public AudioSource sunSource;
 
+    public static bool isPaused = false;
+
+    public static void StopPausing()
+    {
+        isPaused = false;
+    }
+
+    public static void Pausing()
+    {
+        isPaused = true;
+    }
+
     private void Start()
     {
         plantSource = GetComponent<AudioSource>();
@@ -34,6 +46,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isPaused) return;
+
         sunText.text = suns.ToString();
 
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, tileMask);

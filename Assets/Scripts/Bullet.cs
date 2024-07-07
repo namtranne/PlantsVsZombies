@@ -29,6 +29,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if(GameManager.isPaused) return;
         switch (direction)
         {
             case BulletDirection.Left:
