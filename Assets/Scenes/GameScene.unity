@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 753077631}
   plantImage: {fileID: 756390882}
   plantSprite: {fileID: 21300000, guid: cc09751f4a661064cace9350f8c3397e, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: dedb9e28cf6bfc94b870be5f2e09507f, type: 3}
@@ -2923,7 +2923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 415910917}
   plantImage: {fileID: 219462166}
   plantSprite: {fileID: 972912918, guid: 43f34c4a6a114d94ba8f971378801e6d, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: 2f4fe72c61420304d844ab6a3c82f08b, type: 3}
@@ -3200,7 +3200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 29494138}
   plantImage: {fileID: 1150491867}
   plantSprite: {fileID: 21300000, guid: 15b0a93132bb2b246aaf775c7f3ee94f, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: 01c9b1fd9cb70764cab7b08fe4979d1b, type: 3}
@@ -3714,10 +3714,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 1286455380}
   plantImage: {fileID: 649664091}
   plantSprite: {fileID: -482353601, guid: deacc92377ede574b8a7ecfe79dff6ed, type: 3}
-  plantObject: {fileID: 3359103422527997184, guid: 060425111e7aaeb4596ccc29f188a259, type: 3}
+  plantObject: {fileID: 3359103422527997184, guid: b60a248279a7d445f98d0239b549e164, type: 3}
   priceText: {fileID: 1926127681}
   price: 100
 --- !u!1 &531307460
@@ -6534,6 +6534,7 @@ MonoBehaviour:
   zombiesKilled: 0
   progressBar: {fileID: 350967275}
   zombieDelay: 0.5
+  level: 0
 --- !u!4 &862809827
 Transform:
   m_ObjectHideFlags: 0
@@ -7576,7 +7577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 304652645}
   plantImage: {fileID: 771043757}
   plantSprite: {fileID: 1393839667, guid: 4f86b66683a658b4cafeb08ed2ae786f, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: bbcab099cc295af4f9ff45819c236196, type: 3}
@@ -7708,7 +7709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 588856546}
   plantImage: {fileID: 863828966}
   plantSprite: {fileID: 21300000, guid: 53ef94414bbf694468c98221795bfab2, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: fd61c491491e58b44abd30fbfbb0c403, type: 3}
@@ -8200,7 +8201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 1059781280}
   plantImage: {fileID: 312393614}
   plantSprite: {fileID: -1469851317, guid: 0b7bb96d3e830284599aef6087efa39c, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: bb53f614569828c40bb425a810e68f73, type: 3}
@@ -8728,7 +8729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 1152198305}
   plantImage: {fileID: 315404337}
   plantSprite: {fileID: 21300000, guid: 69d44954548eae84f86dff8bf1041681, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: 68fce9dd8de322b40bf5afd1bbad87b9, type: 3}
@@ -11642,7 +11643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 1396915343}
   plantImage: {fileID: 1909382584}
   plantSprite: {fileID: -1446662354, guid: 96461538dffeec14eae61e8a0425409c, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: 1a5f6b27a11a7e547af349b68233e3e7, type: 3}
@@ -12609,7 +12610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 753077631}
   plantImage: {fileID: 1651067078}
   plantSprite: {fileID: 21300000, guid: 2fa8a1edda60a9f40bf4549906f54488, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: 15ab3a17384f9e847b23ea24661fa8d0, type: 3}
@@ -13240,7 +13241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 169037025}
   plantImage: {fileID: 1652925469}
   plantSprite: {fileID: 668830839, guid: bb2b661299b40d4499f6accc9b156019, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: 2a0ff332284bbd04fb21c878ae33b8c0, type: 3}

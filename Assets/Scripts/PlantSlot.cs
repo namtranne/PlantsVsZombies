@@ -19,20 +19,21 @@ public class PlantSlot : MonoBehaviour, IPointerDownHandler
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
     }
 
     void Update()
     {
-        if (gameManager.suns >= price)
-        {
-            background.color = Color.white;
-            plantImage.color = Color.white;
-        }
-        else
-        {
-            background.color = Color.gray;
-            plantImage.color = Color.gray;
-        }
+        //if (gameManager.suns >= price)
+        //{
+        //    background.color = Color.white;
+        //    plantImage.color = Color.white;
+        //}
+        //else
+        //{
+        //    background.color = Color.gray;
+        //    plantImage.color = Color.gray;
+        //}
     }
 
     private void OnValidate()

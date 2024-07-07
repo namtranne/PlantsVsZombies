@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d391b24c524aa1841f194f02dca63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  background: {fileID: 8885437760384162983}
   plantImage: {fileID: 6431385798719115996}
   plantSprite: {fileID: -482353601, guid: deacc92377ede574b8a7ecfe79dff6ed, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: b60a248279a7d445f98d0239b549e164, type: 3}

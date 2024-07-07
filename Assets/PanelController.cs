@@ -4,44 +4,53 @@ using UnityEngine;
 
 public class PanelController : MonoBehaviour
 {
-    public Transform[] spawnPoints;
-    private int temp;
+    private int currentCount;
     private List<GameObject> listPlants;
     private List<int> ids;
     public Transform parentObject;
-    // Start is called before the first frame update
+    private int maxSlot;
+
     void Start()
     {
-        temp = 0;
+        currentCount = 0;
         listPlants = new List<GameObject>();
         ids = new List<int>();
-        
-
+        maxSlot = 7;
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool AddGameObject(GameObject go, int id)
     {
-        
-    }
+        if (currentCount >= maxSlot)
+            return false;
 
-    public int AddGameObject(GameObject go, int id)
-    {
-        if (temp >= spawnPoints.Length) return spawnPoints.Length;
         GameObject instantiatedImage = Instantiate(go);
         instantiatedImage.transform.SetParent(parentObject, false);
         listPlants.Add(instantiatedImage);
         ids.Add(id);
-        temp++;
-        return spawnPoints.Length;
+        currentCount++;
+        return true;
     }
 
-    public void RemoveGameObject(int id)
+    public bool RemoveGameObject(int id)
     {
-        int p = ids.FindIndex(i => i == id);
-        Destroy(listPlants[p]);
-        ids.RemoveAt(p);
-        listPlants.RemoveAt(p);
-        temp--;
+        int index = ids.IndexOf(id);
+        if (index != -1)
+        {
+            Destroy(listPlants[index]);
+            ids.RemoveAt(index);
+            listPlants.RemoveAt(index);
+            currentCount--;
+            return true;
+        }
+        else
+        {
+            Debug.LogWarning("Attempted to remove an item that does not exist: " + id);
+            return false;
+        }
+    }
+
+    public int GetAvailableSlots()
+    {
+        return maxSlot - currentCount;
     }
 }

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int suns;
     public TextMeshProUGUI sunText;
     public LayerMask sunMask;
+    public GameObject panel;
 
     public AudioClip plantSFX;
     public AudioClip sunSFX;
@@ -23,10 +24,12 @@ public class GameManager : MonoBehaviour
     private bool isDragging = false;
     private GameObject draggedPlantInstance;
     private int currentPlantPrice;
+    private bool isSelecting;
 
     private void Start()
     {
         plantSource = GetComponent<AudioSource>();
+        isSelecting = true;
     }
 
     public void ChoosePlant(GameObject plant, Sprite sprite, int price)
@@ -78,7 +81,7 @@ public class GameManager : MonoBehaviour
             {
                 sunSource.pitch = UnityEngine.Random.Range(.9f, 1.1f);
                 sunSource.PlayOneShot(sunSFX);
-                suns += sunHit.collider.gameObject.GetComponent<Sun>().value;
+                suns += 25;
                 Destroy(sunHit.collider.gameObject);
             }
         }
@@ -92,14 +95,6 @@ public class GameManager : MonoBehaviour
     public bool getIsDragging()
     {
         return isDragging;
-    }
-
-    public void UpdateDraggedPlantPosition(Vector3 position)
-    {
-        if (draggedPlantInstance != null)
-        {
-            draggedPlantInstance.transform.position = position;
-        }
     }
 
     void Plant(GameObject hitObject)
@@ -118,5 +113,11 @@ public class GameManager : MonoBehaviour
             return;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void StartGame()
+    {
+        panel.SetActive(false);
+
     }
 }
