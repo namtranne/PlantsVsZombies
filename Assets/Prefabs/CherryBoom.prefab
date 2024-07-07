@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 4406880567053208742}
   - component: {fileID: 891929933197760200}
   - component: {fileID: 3268109216912756460}
-  - component: {fileID: 3099833876102898989}
-  - component: {fileID: 8067121216220186784}
+  - component: {fileID: 2302478908783051751}
   m_Layer: 0
-  m_Name: SunFlower
+  m_Name: CherryBoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 3359103422527997184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1846, y: -0.1038, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -881867296, guid: 96461538dffeec14eae61e8a0425409c, type: 3}
+  m_Sprite: {fileID: -558106137, guid: 86e7e99b90cffc14c87da2702a816ee1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.06, y: 1.18}
+  m_Size: {x: 0.7, y: 0.72}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -98,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 3359103422527997184}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e9228987418724821a27000bbba5ace5, type: 2}
+  m_Controller: {fileID: 9100000, guid: de34744f6abae3844905b9223c65e30a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -123,52 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   tile: {fileID: 0}
---- !u!61 &3099833876102898989
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3359103422527997184}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2333333, y: 1.2166667}
-    newSize: {x: 1.06, y: 1.18}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.2333333, y: 1.2166667}
-  m_EdgeRadius: 0
---- !u!114 &8067121216220186784
+--- !u!114 &2302478908783051751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,8 +131,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3359103422527997184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eae451022443d214abdc1926eabe0f2c, type: 3}
+  m_Script: {fileID: 11500000, guid: b08a904da73056e44a8b1d9720d4a906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunObject: {fileID: 3173747207462336189, guid: 91bbab0bd60ab6840a7c41afc4ca1b99, type: 3}
-  cooldown: 8
+  explosionRadius: 2
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 128

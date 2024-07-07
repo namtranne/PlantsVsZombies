@@ -7,8 +7,6 @@ public class SpikeWeed : MonoBehaviour
     public float range = .6f;          // Range within which it can attack
     public LayerMask targetMask;
 
-    private bool isAttacking = false;   // Flag to indicate if currently attacking
-
     // Start is called before the first frame update
     void Start()
     {

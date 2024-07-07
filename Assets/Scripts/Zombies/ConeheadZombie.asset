@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1f1c88c5d3480418e3dae6bd84b280, type: 3}
   m_Name: ConeheadZombie
   m_EditorClassIdentifier: 
-  health: 16
-  speed: 0.005
+  health: 15
+  speed: 0.0065
   damage: 2
   range: 0
   eatCooldown: 2

@@ -94,14 +94,6 @@ public class GameManager : MonoBehaviour
         return isDragging;
     }
 
-    public void UpdateDraggedPlantPosition(Vector3 position)
-    {
-        if (draggedPlantInstance != null)
-        {
-            draggedPlantInstance.transform.position = position;
-        }
-    }
-
     void Plant(GameObject hitObject)
     {
         plantSource.PlayOneShot(plantSFX);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Jalapeno : MonoBehaviour
 {
     public GameObject explosionEffect;
+    private GameObject explosion;
     public LayerMask targetMask;
 
     void Start()
@@ -14,8 +15,8 @@ public class Jalapeno : MonoBehaviour
 
     void Explode()
     {
-        GameObject explosion = Instantiate(explosionEffect, new Vector3(2, transform.position.y + .5f, 0), Quaternion.identity);
-        Destroy(gameObject);
+        if (explosionEffect != null)
+            explosion = Instantiate(explosionEffect, new Vector3(2, transform.position.y + .5f, 0), Quaternion.identity);
 
         Collider2D[] zombies = Physics2D.OverlapBoxAll(transform.position, new Vector2(20f, .4f), 0, targetMask);
         foreach (Collider2D zombie in zombies)
@@ -24,5 +25,6 @@ public class Jalapeno : MonoBehaviour
         }
         GetComponent<Plant>().tile.hasPlant = false;
         Destroy(explosion, 1f);
+        Destroy(gameObject);
     }
 }

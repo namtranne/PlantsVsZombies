@@ -5,11 +5,11 @@ using UnityEngine;
 public class Sun : MonoBehaviour
 {
     public float dropToYPos;
-    private float speed = 0.1f;
+    private float speed = 0.2f;
     // Start is called before the first frame update
     private void Start()
     {
-        Destroy(gameObject, 12);
+        Destroy(gameObject, 15);
     }
 
     // Update is called once per frame

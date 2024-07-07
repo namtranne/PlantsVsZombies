@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1f1c88c5d3480418e3dae6bd84b280, type: 3}
   m_Name: BaseballZombie
   m_EditorClassIdentifier: 
-  health: 16
-  speed: 0.007
+  health: 20
+  speed: 0.008
   damage: 2
   range: 0.2
   eatCooldown: 2

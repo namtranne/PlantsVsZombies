@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88da14a9b2f684d4e8b05d66a69a76c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 60
+  health: 90
   tile: {fileID: 0}
 --- !u!61 &3099833876102898989
 BoxCollider2D:

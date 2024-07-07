@@ -9,7 +9,7 @@ public class SunFlower : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("SpawnSun", cooldown, cooldown);
+        InvokeRepeating("SpawnSun", cooldown, Random.Range(cooldown, cooldown * 1.2f));
     }
 
     void SpawnSun()

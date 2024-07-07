@@ -14,7 +14,6 @@ public class PlantSlot : MonoBehaviour, IPointerDownHandler
     public TextMeshProUGUI priceText;
     public int price;
     private GameManager gameManager;
-    private bool isDragging = false;
 
     void Start()
     {
@@ -55,7 +54,6 @@ public class PlantSlot : MonoBehaviour, IPointerDownHandler
         {
             gameManager.ChoosePlant(plantObject, plantSprite, price);
             gameManager.StartDragging();
-            isDragging = true;
         }
     }
 }
