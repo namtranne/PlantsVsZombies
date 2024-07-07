@@ -46,7 +46,7 @@ public class PauseMenu : MonoBehaviour
 
     void ResumeGame()
     {
-        if (pausePanel != null)
+        if (pausePanel != null && !GameManager.isSelecting)
         {
             pausePanel.SetActive(false);
             GameManager.StopPausing();

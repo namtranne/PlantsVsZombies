@@ -24,9 +24,11 @@ public class GameManager : MonoBehaviour
     private bool isDragging = false;
     private GameObject draggedPlantInstance;
     private int currentPlantPrice;
-    private bool isSelecting;
 
-    public static bool isPaused = false;
+
+    public static bool isSelecting = true;
+    public static bool isPaused = true;
+    public static int level = 1;
 
     public static void StopPausing()
     {
@@ -42,6 +44,7 @@ public class GameManager : MonoBehaviour
     {
         plantSource = GetComponent<AudioSource>();
         isSelecting = true;
+        isPaused = true;
     }
 
     public void ChoosePlant(GameObject plant, Sprite sprite, int price)
@@ -123,7 +126,8 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(0);
+            level++;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             return;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -132,6 +136,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         panel.SetActive(false);
-
+        isSelecting = false;
+        isPaused = false;
     }
 }

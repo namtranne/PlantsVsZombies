@@ -16,13 +16,19 @@ public class ZombieSpawner : MonoBehaviour
     public Slider progressBar;
     public float zombieDelay = 5;
 
-    public int level;
+
+    private bool flagStart = false;
     // private LevelManager levelManager;
 
     // Start is called before the first frame update
-    private void Start()
+    private void Update()
     {
-        StartLevel(level);
+        Debug.Log(GameManager.level);
+        if (GameManager.isSelecting || flagStart) return;
+
+        flagStart = true;
+        Debug.Log("Start level");
+        StartLevel(GameManager.level);
         InvokeRepeating("SpawnZombie", zombieDelay * 2, zombieDelay);
 
         progressBar.maxValue = zombieMax;
