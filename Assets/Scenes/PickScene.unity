@@ -7776,7 +7776,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 022e37ff964ab42b3b64820efb23e350, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14009,7 +14009,6 @@ MonoBehaviour:
   zombiesKilled: 0
   progressBar: {fileID: 1286764842}
   zombieDelay: 5
-  level: 0
 --- !u!4 &1654185961
 Transform:
   m_ObjectHideFlags: 0
