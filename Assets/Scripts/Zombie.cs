@@ -43,6 +43,8 @@ public class Zombie : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.isPaused) return;
+
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, range, plantMask);
         if(hit.collider)
         {
@@ -79,6 +81,8 @@ public class Zombie : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
+        if (GameManager.isPaused) return;
+
         // Move the zombie to the left
         if (curAnimation == "walking")
             transform.position -= new Vector3(speed, 0, 0);
@@ -166,4 +170,28 @@ public class Zombie : MonoBehaviour
     {
         return curAnimation == "death";
     }
+
+    public void BeBited(float delay = 0)
+    {
+        Destroy(gameObject, delay);
+        ZombieSpawner zombieSpawner = GameObject.Find("ZombieSpawner").GetComponent<ZombieSpawner>();
+        zombieSpawner.zombiesKilled++;
+        if (zombieSpawner.zombiesKilled >= zombieSpawner.zombieMax)
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().Win();
+        }
+    }
+
+    public void BeSmashed(float delay = 0)
+    {
+        GetComponent<Animator>().runtimeAnimatorController = type.deathAnimation;
+        Destroy(gameObject, delay);
+        ZombieSpawner zombieSpawner = GameObject.Find("ZombieSpawner").GetComponent<ZombieSpawner>();
+        zombieSpawner.zombiesKilled++;
+        if (zombieSpawner.zombiesKilled >= zombieSpawner.zombieMax)
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().Win();
+        }
+    }
+
 }

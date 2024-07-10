@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int suns;
     public TextMeshProUGUI sunText;
     public LayerMask sunMask;
+    public GameObject panel;
 
     public AudioClip plantSFX;
     public AudioClip sunSFX;
@@ -24,9 +25,26 @@ public class GameManager : MonoBehaviour
     private GameObject draggedPlantInstance;
     private int currentPlantPrice;
 
+
+    public static bool isSelecting = true;
+    public static bool isPaused = true;
+    public static int level = 1;
+
+    public static void StopPausing()
+    {
+        isPaused = false;
+    }
+
+    public static void Pausing()
+    {
+        isPaused = true;
+    }
+
     private void Start()
     {
         plantSource = GetComponent<AudioSource>();
+        isSelecting = true;
+        isPaused = true;
     }
 
     public void ChoosePlant(GameObject plant, Sprite sprite, int price)
@@ -38,6 +56,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (isPaused) return;
+
         sunText.text = suns.ToString();
 
         if (isDragging && currentPlant)
@@ -94,14 +114,6 @@ public class GameManager : MonoBehaviour
         return isDragging;
     }
 
-    public void UpdateDraggedPlantPosition(Vector3 position)
-    {
-        if (draggedPlantInstance != null)
-        {
-            draggedPlantInstance.transform.position = position;
-        }
-    }
-
     void Plant(GameObject hitObject)
     {
         plantSource.PlayOneShot(plantSFX);
@@ -114,9 +126,17 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(0);
+            level++;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             return;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void StartGame()
+    {
+        panel.SetActive(false);
+        isSelecting = false;
+        isPaused = false;
     }
 }

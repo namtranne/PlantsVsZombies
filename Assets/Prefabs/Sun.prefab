@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropToYPos: 0
+  value: 25
 --- !u!61 &8995865997221397994
 BoxCollider2D:
   m_ObjectHideFlags: 0

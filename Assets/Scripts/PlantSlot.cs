@@ -19,6 +19,7 @@ public class PlantSlot : MonoBehaviour, IPointerDownHandler
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
     }
 
     void Update()
