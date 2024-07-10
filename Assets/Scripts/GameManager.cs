@@ -20,33 +20,54 @@ public class GameManager : MonoBehaviour
     private AudioSource plantSource;
     public AudioSource sunSource;
 
+    private bool isDragging = false;
+    private GameObject draggedPlantInstance;
+    private int currentPlantPrice;
+
     private void Start()
     {
         plantSource = GetComponent<AudioSource>();
     }
 
-
-    public void BuyPlant(GameObject plant, Sprite sprite) {
+    public void ChoosePlant(GameObject plant, Sprite sprite, int price)
+    {
         currentPlant = plant;
         currentPlantSprite = sprite;
+        currentPlantPrice = price;
     }
 
-    // Update is called once per frame
     void Update()
     {
         sunText.text = suns.ToString();
 
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, tileMask);
+        if (isDragging && currentPlant)
+        {
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.z = 0;
 
-        foreach(Transform tile in tiles) {
-            tile.GetComponent<SpriteRenderer>().enabled=false;
-        }
+            if (draggedPlantInstance == null)
+            {
+                draggedPlantInstance = new GameObject("DraggedPlant");
+                var spriteRenderer = draggedPlantInstance.AddComponent<SpriteRenderer>();
+                spriteRenderer.sprite = currentPlantSprite;
+            }
 
-        if(hit.collider && currentPlant) {
-            hit.collider.GetComponent<SpriteRenderer>().sprite = currentPlantSprite;
-            hit.collider.GetComponent<SpriteRenderer>().enabled = true;
-            if(Input.GetMouseButtonDown(0) && !hit.collider.GetComponent<Tile>().hasPlant) {
-                Plant(hit.collider.gameObject);
+            draggedPlantInstance.transform.position = mousePosition;
+            if (Input.GetMouseButtonUp(0))
+            {
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, tileMask);
+
+                if (hit.collider && !hit.collider.GetComponent<Tile>().hasPlant)
+                {
+                    Plant(hit.collider.gameObject);
+                    suns -= currentPlantPrice;
+                }
+
+                currentPlant = null;
+                currentPlantSprite = null;
+                Destroy(draggedPlantInstance);
+                draggedPlantInstance = null;
+                isDragging = false;
             }
         }
 
@@ -62,19 +83,36 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
+
+    public void StartDragging()
+    {
+        isDragging = true;
+    }
+
+    public bool getIsDragging()
+    {
+        return isDragging;
+    }
+
+    public void UpdateDraggedPlantPosition(Vector3 position)
+    {
+        if (draggedPlantInstance != null)
+        {
+            draggedPlantInstance.transform.position = position;
+        }
+    }
+
     void Plant(GameObject hitObject)
     {
         plantSource.PlayOneShot(plantSFX);
-        Instantiate(currentPlant, hitObject.transform.position, Quaternion.identity);
-        currentPlant = null;
-        currentPlantSprite = null;
+        GameObject plant = Instantiate(currentPlant, hitObject.transform.position, Quaternion.identity);
         hitObject.GetComponent<Tile>().hasPlant = true;
+        plant.GetComponent<Plant>().tile = hitObject.GetComponent<Tile>();
     }
 
     public void Win()
     {
-        if(SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCountInBuildSettings)
+        if (SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(0);
             return;

@@ -10,10 +10,12 @@ public class PlantGenerator : MonoBehaviour
 
     public Transform spawnPosition; 
 
-    public int maxPlant = 8;
+    private int maxPlant = 9;
 
     public int localPositionX = 30;
     public int localPositionY = 400;
+
+    public BowlingType[] bowlingTypes;
 
 
     void Start()
@@ -27,10 +29,9 @@ public class PlantGenerator : MonoBehaviour
         AddNewObject();
         while (true)
         {
-            // Randomly choose an interval between 1 and 3 seconds
-            float waitTime = Random.Range(10f, 18f);
+            float waitTime = Random.Range(3f, 6f);
             yield return new WaitForSeconds(waitTime);
-            // Check if the number of children in the layout group has reached the maximum limit
+            // Randomly choose an interval between 1 and 3 seconds
             if (layoutGroup.transform.childCount < maxPlant)
             {
                 // Instantiate and add a new object to the layout group
@@ -50,9 +51,13 @@ public class PlantGenerator : MonoBehaviour
             Debug.LogError("Prefab or Layout Group not assigned.");
             return;
         }
+         // Select a random index
+        int randomIndex = Random.Range(0, bowlingTypes.Length);
+        BowlingType randomBowlingType = bowlingTypes[randomIndex];
 
         // Instantiate the prefab
         GameObject newObject = Instantiate(prefab, spawnPosition.position, spawnPosition.rotation);
+        newObject.GetComponent<BowlingGamePlantSlot>().UpdatePlant(randomBowlingType);
 
         // Set the parent to the layout group
         newObject.transform.SetParent(layoutGroup.transform, false);

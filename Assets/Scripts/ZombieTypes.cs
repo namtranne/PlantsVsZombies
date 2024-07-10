@@ -14,5 +14,17 @@ public class ZombieTypes : ScriptableObject
     public RuntimeAnimatorController eatAnimation;
     public RuntimeAnimatorController deathAnimation;
     public RuntimeAnimatorController animator;
-    public AudioClip[] hitClips;
+    public AudioClip hitClip;
+
+    //Boss zombie
+    public GameObject chat;
+    public GameObject avatar;
+    public GameObject portrait;
+    public GameObject ultimateEffect;
+    public Sprite newAvatar;
+    public AudioSource guardAudioSource;
+    public AudioSource teleAudioSource;
+    public AudioSource ultimateAudioSource;
+    public AudioSource attackAudioSource;
+
 }

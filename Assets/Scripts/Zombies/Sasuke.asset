@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1f1c88c5d3480418e3dae6bd84b280, type: 3}
+  m_Name: Sasuke
+  m_EditorClassIdentifier: 
+  health: 0
+  speed: 0
+  damage: 0
+  range: 0.5
+  eatCooldown: 1
+  sprite: {fileID: 0}
+  eatAnimation: {fileID: 0}
+  deathAnimation: {fileID: 0}
+  animator: {fileID: 9100000, guid: 5b899b75a75094e90ad839c07a3f9bb3, type: 2}
+  hitClip: {fileID: 8300000, guid: 494888dab0e7c4f7c85bd1fbab03a873, type: 3}
+  chat: {fileID: 6368995605432145921, guid: 55427f989537844a9b7c4bed72e78859, type: 3}
+  avatar: {fileID: 782898942730491709, guid: fc5815cea15bd4122bf05b9b62798c5b, type: 3}
+  portrait: {fileID: 3359038917494385511, guid: 08db8f2e9516d4ad9bbdf31a793280e6, type: 3}
+  ultimateEffect: {fileID: 2695493775353874002, guid: 6187aac4a6ec54044bb45c108731fc2a, type: 3}
+  newAvatar: {fileID: 0}
+  guardAudioSource: {fileID: 6789887765987954266, guid: a997396fbf86746cdb542de3b89c0b22, type: 3}
+  teleAudioSource: {fileID: 643863103404069625, guid: 109b6132bb19349e18266ffffa3c8af9, type: 3}
+  ultimateAudioSource: {fileID: 2786736401571722408, guid: 824ab8d1c520e4206b179d0527a2eee1, type: 3}
+  attackAudioSource: {fileID: 6789887765987954266, guid: 9e8e0e904ac9442d086538da654b18b6, type: 3}

@@ -1,0 +1,642 @@
+fileFormatVersion: 2
+guid: 935e847481110475493cb35c596ef50c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_0
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 508
+        width: 99
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954508fbd3d9f47028fb013e986c6671
+      internalID: -1935650021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_1
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 504
+        width: 106
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab37d4d693744c6789cce726e2c345d
+      internalID: -1072309087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_2
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 507
+        width: 164
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbab86fc3efa349b4a6c83cc2f9fbdc5
+      internalID: -2142631206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_3
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 506
+        width: 165
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e26d3591a9194dc4afc87cc52f0466d
+      internalID: -802738408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_4
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 504
+        width: 98
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cff189dc4b854912ab3fc885e69c0d7
+      internalID: 1267541723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_5
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 344
+        width: 85
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8abd268f9e4f3434eb8bd0536aab5285
+      internalID: -866707823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_6
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 344
+        width: 89
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03774665f22d476db8e1662f1c4d83a
+      internalID: -1831396040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_7
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 345
+        width: 138
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 354933c6adf214d5db14e8debeaeed5d
+      internalID: 1965700815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_8
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 343
+        width: 123
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da15d036498c4ac891f4b86f9e86a9d
+      internalID: 1269119295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_9
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 345
+        width: 112
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c1152fb136e4af68961abc127e64a5
+      internalID: -1721962144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_10
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 346
+        width: 86
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c779c862ff8f7430289c54fde13f7bad
+      internalID: -789130609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_11
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 185
+        width: 104
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2caa2aaed79eb4843a8aea320ccbaab5
+      internalID: -308517448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_12
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 186
+        width: 105
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd2b21da5ea754b33b73766cd053d48a
+      internalID: 2114797056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_13
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 191
+        width: 105
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953d6f0222cc544f5a87a950b6e57488
+      internalID: -693956819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_14
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 181
+        width: 140
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2982765618a6c4cdea870d9d5c518995
+      internalID: 1761000072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_15
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 178
+        width: 138
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5413bc576f91641758bdd29494d25d57
+      internalID: 1161935487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_16
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 186
+        width: 97
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83632b10ceb784f6ebb5b3a997b9dbda
+      internalID: 575056683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_17
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 3
+        width: 114
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f18a8d4db6ad481c8d18bf473b1656b
+      internalID: -1897244099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_18
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 3
+        width: 94
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04914039bcf5c492e850f6146321fd5b
+      internalID: -1821266245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_19
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 2
+        width: 112
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0355cf8cca04ca59a16321f9e3b58d
+      internalID: 1632649812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_20
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 11
+        width: 117
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894fbf1895a1940c2862ac67a32fca76
+      internalID: 285427993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_21
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 4
+        width: 102
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3511a01d539674f2a9bfb925d8937631
+      internalID: 1233921933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_22
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 16
+        width: 82
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc870e61821f4f14b2e3b496a4725c4
+      internalID: 687872588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Itachi-removebg-preview-2_23
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 124
+        width: 70
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d420abadb7088494089be5602c253368
+      internalID: -913857632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Itachi-removebg-preview-2_0: -1935650021
+      Itachi-removebg-preview-2_1: -1072309087
+      Itachi-removebg-preview-2_10: -789130609
+      Itachi-removebg-preview-2_11: -308517448
+      Itachi-removebg-preview-2_12: 2114797056
+      Itachi-removebg-preview-2_13: -693956819
+      Itachi-removebg-preview-2_14: 1761000072
+      Itachi-removebg-preview-2_15: 1161935487
+      Itachi-removebg-preview-2_16: 575056683
+      Itachi-removebg-preview-2_17: -1897244099
+      Itachi-removebg-preview-2_18: -1821266245
+      Itachi-removebg-preview-2_19: 1632649812
+      Itachi-removebg-preview-2_2: -2142631206
+      Itachi-removebg-preview-2_20: 285427993
+      Itachi-removebg-preview-2_21: 1233921933
+      Itachi-removebg-preview-2_22: 687872588
+      Itachi-removebg-preview-2_23: -913857632
+      Itachi-removebg-preview-2_3: -802738408
+      Itachi-removebg-preview-2_4: 1267541723
+      Itachi-removebg-preview-2_5: -866707823
+      Itachi-removebg-preview-2_6: -1831396040
+      Itachi-removebg-preview-2_7: 1965700815
+      Itachi-removebg-preview-2_8: 1269119295
+      Itachi-removebg-preview-2_9: -1721962144
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

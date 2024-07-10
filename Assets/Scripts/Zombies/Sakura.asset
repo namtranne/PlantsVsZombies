@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1f1c88c5d3480418e3dae6bd84b280, type: 3}
+  m_Name: Sakura
+  m_EditorClassIdentifier: 
+  health: 0
+  speed: 0
+  damage: 0
+  range: 0.5
+  eatCooldown: 1
+  sprite: {fileID: 0}
+  eatAnimation: {fileID: 0}
+  deathAnimation: {fileID: 0}
+  animator: {fileID: 9100000, guid: c7f9012d2afe04f2bbb66db38bfce493, type: 2}
+  hitClip: {fileID: 8300000, guid: 494888dab0e7c4f7c85bd1fbab03a873, type: 3}
+  chat: {fileID: 6368995605432145921, guid: 8aa3f16deafb04cd6a9948565693245e, type: 3}
+  avatar: {fileID: 782898942730491709, guid: 8101f08c2dd184ce38a16975182ca13d, type: 3}
+  portrait: {fileID: 3359038917494385511, guid: de7a6ab45295e402491e6bfe106b5202, type: 3}
+  ultimateEffect: {fileID: 276184024940435997, guid: 25b9ab72ebdec4ff78de5a8dd7b343b7, type: 3}
+  newAvatar: {fileID: 21300000, guid: 91f957305e0b245dfb7340818ddbc5b8, type: 3}
+  guardAudioSource: {fileID: 829938543970286221, guid: 524fd5d09b4df40358a1ae28b64c1323, type: 3}
+  teleAudioSource: {fileID: 643863103404069625, guid: 109b6132bb19349e18266ffffa3c8af9, type: 3}
+  ultimateAudioSource: {fileID: 7342429404368771547, guid: 3724a7b2cebf846d8948bfa158a21493, type: 3}
+  attackAudioSource: {fileID: 6789887765987954266, guid: cae3c01fc69374542a84fc48a6b495d8, type: 3}

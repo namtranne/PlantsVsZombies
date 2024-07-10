@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: c7784837dd1764b9380a0c509a740186
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_0
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 26
+        width: 187
+        height: 165
+      alignment: 9
+      pivot: {x: 0.65421134, y: 0.38348517}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8262c7f3142674468a2babd755f9ad21
+      internalID: 1185471276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_1
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 28
+        width: 151
+        height: 163
+      alignment: 9
+      pivot: {x: 0.5572934, y: 0.3761585}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a3b7c688df8448a82b829df694d0c3
+      internalID: 192259433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_2
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 28
+        width: 186
+        height: 167
+      alignment: 9
+      pivot: {x: 0.63953686, y: 0.38488075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bc83e2f394141f0813c4017087ccc1
+      internalID: 1565347221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_3
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 29
+        width: 121
+        height: 166
+      alignment: 9
+      pivot: {x: 0.500001, y: 0.3378619}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c293a3db4d941358a69df5a76aba6a
+      internalID: 797849218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_4
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 28
+        width: 140
+        height: 167
+      alignment: 9
+      pivot: {x: 0.58239394, y: 0.40214866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d73bfa677b3b498c84e88834016a046
+      internalID: -778253294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_5
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 324
+        width: 142
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a65e388b7184e1487e751b65aef9f9
+      internalID: -1056508075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_6
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 324
+        width: 122
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f43b51ac21841d0a0e79dffa16d14d
+      internalID: -855715863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_7
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 324
+        width: 186
+        height: 117
+      alignment: 9
+      pivot: {x: 0.61886495, y: 0.46713805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422893c3f54114dcca335bea1a082809
+      internalID: 730113510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_8
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 324
+        width: 192
+        height: 117
+      alignment: 9
+      pivot: {x: 0.6451896, y: 0.4589223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9531c2c113b4929ad3152b0edcf45c
+      internalID: -329278172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_9
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 325
+        width: 191
+        height: 116
+      alignment: 9
+      pivot: {x: 0.63588357, y: 0.5000011}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97e0e7882248417884a1fb38b6be11b
+      internalID: -1934732749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_10
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 210
+        width: 156
+        height: 99
+      alignment: 9
+      pivot: {x: 0.6109138, y: 0.5776771}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f063963b83e834e198a1179d8aaa791f
+      internalID: 768230422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_11
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 209
+        width: 137
+        height: 98
+      alignment: 9
+      pivot: {x: 0.5420991, y: 0.56866115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba46c24baef44199b9d84ceee4257e2
+      internalID: -1337974220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_12
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 211
+        width: 230
+        height: 98
+      alignment: 9
+      pivot: {x: 0.713147, y: 0.58827865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600fb158409d3471ca0bf5bc5154849e
+      internalID: 1999954307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_13
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 212
+        width: 237
+        height: 98
+      alignment: 9
+      pivot: {x: 0.7271309, y: 0.56866145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe94010ace6414e6cb4f6358589cccc0
+      internalID: 1050841398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fukasaku__Shima-removebg-preview-2_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 214
+        width: 187
+        height: 97
+      alignment: 9
+      pivot: {x: 0.6542113, y: 0.579279}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5842e40bd8941aca6b4a8251751626
+      internalID: 94381568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Fukasaku__Shima-removebg-preview-2_0: 1185471276
+      Fukasaku__Shima-removebg-preview-2_1: 192259433
+      Fukasaku__Shima-removebg-preview-2_10: 768230422
+      Fukasaku__Shima-removebg-preview-2_11: -1337974220
+      Fukasaku__Shima-removebg-preview-2_12: 1999954307
+      Fukasaku__Shima-removebg-preview-2_13: 1050841398
+      Fukasaku__Shima-removebg-preview-2_14: 94381568
+      Fukasaku__Shima-removebg-preview-2_2: 1565347221
+      Fukasaku__Shima-removebg-preview-2_3: 797849218
+      Fukasaku__Shima-removebg-preview-2_4: -778253294
+      Fukasaku__Shima-removebg-preview-2_5: -1056508075
+      Fukasaku__Shima-removebg-preview-2_6: -855715863
+      Fukasaku__Shima-removebg-preview-2_7: 730113510
+      Fukasaku__Shima-removebg-preview-2_8: -329278172
+      Fukasaku__Shima-removebg-preview-2_9: -1934732749
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

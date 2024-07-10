@@ -13,15 +13,21 @@ MonoBehaviour:
   m_Name: NormalZombie
   m_EditorClassIdentifier: 
   health: 10
-  speed: 0.005
+  speed: 0.01
   damage: 2
-  range: 0.2
+  range: 0.25
   eatCooldown: 2
   sprite: {fileID: 21300000, guid: d173beb09fff4ce4e90ff1afe619acb8, type: 3}
   eatAnimation: {fileID: 9100000, guid: 91f80d693c5d4cb4ca73fdcf14e87401, type: 2}
-  deathAnimation: {fileID: 9100000, guid: c6806b2d979d5314d93f1a9fcecd7ded, type: 2}
+  deathAnimation: {fileID: 9100000, guid: a1a600931b8e0402a8a582ab908e007b, type: 2}
   animator: {fileID: 9100000, guid: 3c8758a4722dd4acfbdd87ead55420ba, type: 2}
-  hitClips:
-  - {fileID: 8300000, guid: f8fe306eefb10a341bdd8cf4ee8a65b6, type: 3}
-  - {fileID: 8300000, guid: ab34f0e2827ac9144b31efbeffc1d4fe, type: 3}
-  - {fileID: 8300000, guid: b9c686fa2a958f247b8f2c8241cd7b22, type: 3}
+  hitClip: {fileID: 0}
+  chat: {fileID: 0}
+  avatar: {fileID: 0}
+  portrait: {fileID: 0}
+  ultimateEffect: {fileID: 0}
+  newAvatar: {fileID: 0}
+  guardAudioSource: {fileID: 0}
+  teleAudioSource: {fileID: 0}
+  ultimateAudioSource: {fileID: 0}
+  attackAudioSource: {fileID: 0}

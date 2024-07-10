@@ -54,13 +54,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plantImage: {fileID: 2364582920516659954}
-  plantSprite: {fileID: -624967101, guid: cae67f875cc9f0b459dfdce920cf4704, type: 3}
+  plantSprite: {fileID: 21300000, guid: 53ef94414bbf694468c98221795bfab2, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: dba8715485a82481aa5df40775177ad3, type: 3}
   button: {fileID: -7238820536830965203}
   plantSlotMask:
     serializedVersion: 2
     m_Bits: 1024
-  stopMoving: 0
   speed: 2
 --- !u!114 &-7238820536830965203
 MonoBehaviour:
@@ -243,7 +242,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -624967101, guid: cae67f875cc9f0b459dfdce920cf4704, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 53ef94414bbf694468c98221795bfab2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
