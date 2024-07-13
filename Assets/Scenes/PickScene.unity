@@ -7154,7 +7154,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 022e37ff964ab42b3b64820efb23e350, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11852,6 +11852,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sunObject: {fileID: 3173747207462336189, guid: 91bbab0bd60ab6840a7c41afc4ca1b99, type: 3}
+  initialSpawnDelay: 7
+  minSpawnInterval: 5
+  maxSpawnInterval: 10
+  spawnIntervalDecreaseRate: 0.1
+  minSpawnY: -3
+  maxSpawnY: 0
 --- !u!4 &1594128024
 Transform:
   m_ObjectHideFlags: 0
@@ -12729,8 +12735,10 @@ MonoBehaviour:
   zombiesSpawned: 0
   zombiesKilled: 0
   progressBar: {fileID: 1286764842}
-  zombieDelay: 5
+  baseZombieDelay: 5
   level: 0
+  difficultyMultiplier: 1.2
+  initialPeacePeriod: 30
 --- !u!4 &1654185961
 Transform:
   m_ObjectHideFlags: 0
@@ -14468,7 +14476,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000014305, y: 8.5}
-  m_SizeDelta: {x: 40, y: 50}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1866219986
 MonoBehaviour:
@@ -14838,7 +14846,7 @@ MonoBehaviour:
   tileMask:
     serializedVersion: 2
     m_Bits: 64
-  suns: 1000
+  suns: 50
   sunText: {fileID: 1888940786}
   sunMask:
     serializedVersion: 2

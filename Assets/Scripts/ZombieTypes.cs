@@ -5,9 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New ZombieType", menuName = "Zombie")]
 public class ZombieTypes : ScriptableObject
 {
-    public int health;
+    public float health;
     public float speed;
-    public int damage;
+    public float damage;
     public float range = .5f;
     public float eatCooldown = 1;
     public Sprite sprite;

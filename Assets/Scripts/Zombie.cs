@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    private float speed = 0.4f; // Movement speed
+    public float speed = 0.4f; // Movement speed
     public float health = 10;
-    private int damage;
-    private float range;
+    public float damage;
+    public float range;
     public LayerMask plantMask;
     public ZombieTypes type;
 

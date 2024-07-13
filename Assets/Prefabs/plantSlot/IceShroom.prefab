@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2fa8a1edda60a9f40bf4549906f54488, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c658ecc85a9733448e7d44962f00be2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {fileID: 6992098959297359130}
   plantImage: {fileID: 6050499182668815367}
-  plantSprite: {fileID: 21300000, guid: 2fa8a1edda60a9f40bf4549906f54488, type: 3}
+  plantSprite: {fileID: 21300000, guid: 2c658ecc85a9733448e7d44962f00be2, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: 15ab3a17384f9e847b23ea24661fa8d0, type: 3}
   priceText: {fileID: 6013020065459380655}
   price: 100

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Plant : MonoBehaviour
 {
-    public int health;
+    public float health;
 
     public Tile tile;
 
-    public void Hit(int damage)
+    public void Hit(float damage)
     {
         health -= damage;
         if (health <= 0)

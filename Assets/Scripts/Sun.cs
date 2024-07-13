@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,5 +21,15 @@ public class Sun : MonoBehaviour
         {
             transform.position -= new Vector3(0, speed * Time.fixedDeltaTime, 0);
         }
+    }
+
+    public void SetValue(int newValue)
+    {
+        value = newValue;
+    }
+
+    public int GetValue()
+    {
+        return value;
     }
 }
