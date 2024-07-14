@@ -30,7 +30,21 @@ public class Squash : MonoBehaviour
     {
         if(smashed)
         {
-            Destroy(gameObject, .2f);
+            try
+            {
+                //GetComponent<Plant>().Destroy();
+                Plant parent = gameObject.GetComponentInParent<Plant>();
+                if (parent != null )
+                {
+                    parent.Destroy();
+                }
+                //Destroy(gameObject, .2f);
+            }
+            catch
+            {
+                Debug.Log("Already destroy");
+            }
+            
         }
         else if (aimTimer > 0)
         {

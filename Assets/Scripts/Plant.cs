@@ -10,6 +10,7 @@ public class Plant : MonoBehaviour
 
     public void Hit(int damage)
     {
+        if(!gameObject) return;
         health -= damage;
         if (health <= 0)
         {
@@ -19,6 +20,7 @@ public class Plant : MonoBehaviour
     }
 
     public void Destroy() {
+        //if (!gameObject) return;
         tile.hasPlant = false;
         Destroy(gameObject);
     }

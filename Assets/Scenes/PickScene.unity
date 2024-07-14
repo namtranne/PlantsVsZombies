@@ -13131,6 +13131,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sunObject: {fileID: 3173747207462336189, guid: 91bbab0bd60ab6840a7c41afc4ca1b99, type: 3}
+  initialSpawnDelay: 7
+  minSpawnInterval: 5
+  maxSpawnInterval: 10
+  spawnIntervalDecreaseRate: 0.05
+  minSpawnY: -3
+  maxSpawnY: 0
+  baseSunValue: 25
+  sunValueIncreaseRate: 0.1
 --- !u!4 &1594128024
 Transform:
   m_ObjectHideFlags: 0
@@ -13996,7 +14004,7 @@ MonoBehaviour:
   - {fileID: 1507519266}
   - {fileID: 186261519}
   - {fileID: 1617260419}
-  zombie: {fileID: 4419244606155348726, guid: c1df37dae283d48a9ac6756fd825bfc0, type: 3}
+  zombie: {fileID: 4419244606155348726, guid: 9695c1559407b49369d7adf18359944d, type: 3}
   zombieTypes:
   - type: {fileID: 11400000, guid: 9ea769f8add3d5d489ca44e03f04d0c7, type: 2}
     probability: 4
@@ -14008,7 +14016,10 @@ MonoBehaviour:
   zombiesSpawned: 0
   zombiesKilled: 0
   progressBar: {fileID: 1286764842}
-  zombieDelay: 5
+  baseZombieDelay: 5
+  level: 0
+  difficultyMultiplier: 0.5
+  initialPeacePeriod: 30
 --- !u!4 &1654185961
 Transform:
   m_ObjectHideFlags: 0

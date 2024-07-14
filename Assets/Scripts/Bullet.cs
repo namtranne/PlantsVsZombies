@@ -62,7 +62,16 @@ public class Bullet : MonoBehaviour
     {
         if (other.TryGetComponent<Zombie>(out Zombie zombie))
         {
-            zombie.Hit(damage, freeze);
+            if (!zombie) return;
+            try
+            {
+                zombie.Hit(damage, freeze);
+            }
+            catch
+            {
+                Debug.Log("Zombie is die");
+            }
+            
             Destroy(gameObject);
         }
     }

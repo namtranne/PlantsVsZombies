@@ -6,7 +6,7 @@ public class Zombie : MonoBehaviour
 {
     public float speed = 0.4f; // Movement speed
     public float health = 10;
-    public int damage;
+    public float damage;
     public float range;
     public LayerMask plantMask;
     public ZombieTypes type;
@@ -70,7 +70,7 @@ public class Zombie : MonoBehaviour
         canEat = false;
         Invoke("ResetEatCooldown", eatCooldown);
 
-        targetPlant.Hit(damage);
+        targetPlant.Hit((int)damage);
     }
 
     public void ResetEatCooldown()
@@ -90,6 +90,7 @@ public class Zombie : MonoBehaviour
 
     public virtual void Hit(float damage, bool freeze)
     {
+        if (!gameObject) return;
         audioSource.PlayOneShot(hitClip);
         health -= damage;
         if(freeze) Freeze();
@@ -113,10 +114,18 @@ public class Zombie : MonoBehaviour
 
     public void Die(RuntimeAnimatorController dieAnimation)
     {
+        if (!gameObject) return;
         curAnimation = "death";
         GetComponent<Animator>().enabled = true;
-        GetComponent<Animator>().runtimeAnimatorController = dieAnimation;
-        Destroy(gameObject, 1.4f);
+        if (dieAnimation)
+        {
+            GetComponent<Animator>().runtimeAnimatorController = dieAnimation;
+            Destroy(gameObject, 1.4f);
+        }
+        else
+        {
+            Destroy(gameObject, 0f);
+        }
         GameObject spawner = GameObject.Find("ZombieSpawner");
         if(spawner != null) {
             ZombieSpawner zombieSpawner = spawner.GetComponent<ZombieSpawner>();
@@ -130,6 +139,7 @@ public class Zombie : MonoBehaviour
 
     public void Freeze()
     {
+        if (!gameObject) return;
         CancelInvoke("UnFreeze");
         GetComponent<SpriteRenderer>().color = Color.blue;
         if (speed > 0) speed = type.speed / 2;
@@ -142,6 +152,7 @@ public class Zombie : MonoBehaviour
     }
     public void Frozen(int time)
     {
+        if (!gameObject) return;
         CancelInvoke("UnFrozen");
         GetComponent<SpriteRenderer>().color = Color.blue;
         speed = 0;
@@ -155,6 +166,7 @@ public class Zombie : MonoBehaviour
 
     public void UnFrozen()
     {
+        if (!gameObject) return;
         GetComponent<SpriteRenderer>().color = Color.white;
         speed = type.speed; 
         Destroy(activeFrozenTrap);
@@ -173,6 +185,7 @@ public class Zombie : MonoBehaviour
 
     public void BeBited(float delay = 0)
     {
+        if (!gameObject) return;
         Destroy(gameObject, delay);
         ZombieSpawner zombieSpawner = GameObject.Find("ZombieSpawner").GetComponent<ZombieSpawner>();
         zombieSpawner.zombiesKilled++;
@@ -184,14 +197,16 @@ public class Zombie : MonoBehaviour
 
     public void BeSmashed(float delay = 0)
     {
-        GetComponent<Animator>().runtimeAnimatorController = type.deathAnimation;
-        Destroy(gameObject, delay);
-        ZombieSpawner zombieSpawner = GameObject.Find("ZombieSpawner").GetComponent<ZombieSpawner>();
-        zombieSpawner.zombiesKilled++;
-        if (zombieSpawner.zombiesKilled >= zombieSpawner.zombieMax)
+        try
         {
-            GameObject.Find("GameManager").GetComponent<GameManager>().Win();
+            if (curAnimation != "death")
+                Die(null);
         }
+        catch
+        {
+            Debug.Log("Zombie is Die");
+        }
+
     }
 
 }

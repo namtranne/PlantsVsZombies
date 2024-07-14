@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88da14a9b2f684d4e8b05d66a69a76c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 15
+  tile: {fileID: 0}
 --- !u!1 &8279012726995675990
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  tile: {fileID: 0}
 --- !u!61 &4122849905310112434
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class Jalapeno : MonoBehaviour
         {
             zombie.GetComponent<Zombie>().Boom();
         }
-        // GetComponent<Plant>().tile.hasPlant = false;
+        GetComponent<Plant>().Destroy();
         Destroy(explosion, 1f);
     }
 }

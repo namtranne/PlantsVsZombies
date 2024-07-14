@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     public static bool isPaused = true;
     public static int level = 1;
 
+    public float gameTime { get; private set; }
+
+
     public static void StopPausing()
     {
         isPaused = false;
@@ -45,6 +48,7 @@ public class GameManager : MonoBehaviour
         plantSource = GetComponent<AudioSource>();
         isSelecting = true;
         isPaused = true;
+        gameTime = 0f;
     }
 
     public void ChoosePlant(GameObject plant, Sprite sprite, int price)
@@ -56,6 +60,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (!isPaused)
+        {
+            gameTime += Time.deltaTime;
+        }
+
         if (isPaused) return;
 
         sunText.text = suns.ToString();
@@ -138,5 +147,29 @@ public class GameManager : MonoBehaviour
         panel.SetActive(false);
         isSelecting = false;
         isPaused = false;
+    }
+
+    public void AddSun(int value)
+    {
+        suns += value;
+        sunText.text = suns.ToString();
+        sunSource.pitch = UnityEngine.Random.Range(.9f, 1.1f);
+        sunSource.PlayOneShot(sunSFX);
+    }
+
+    public float GetDifficulty()
+    {
+        return 1f + (level - 1) * 0.2f + gameTime / 300f; 
+    }
+
+    public bool CanAfford(int cost)
+    {
+        return suns >= cost;
+    }
+
+    public void SpendSun(int cost)
+    {
+        suns -= cost;
+        sunText.text = suns.ToString();
     }
 }
