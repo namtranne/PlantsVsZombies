@@ -26,14 +26,16 @@ public class Zombie : MonoBehaviour
     public GameObject activeFrozenTrap;
 
     public RuntimeAnimatorController boomAnimation;
+    public float xBoost = 1;
+    private readonly object dieLock = new object();
 
     // Start is called before the first frame update
     private void Start()
     {
-        health = type.health;
+        health = type.health * xBoost;
         damage = type.damage;
         range = type.range;
-        speed = type.speed;
+        speed = type.speed * (1+xBoost/10);
         eatCooldown = type.eatCooldown;
 
         GetComponent<SpriteRenderer>().sprite = type.sprite;
@@ -49,7 +51,7 @@ public class Zombie : MonoBehaviour
         if(hit.collider)
         {
             targetPlant = hit.collider.GetComponent<Plant>();
-            if (curAnimation != "eating" && targetPlant)
+            if (curAnimation != "eating" && curAnimation!="death" && targetPlant)
             {
                 GetComponent<Animator>().runtimeAnimatorController = type.eatAnimation;
                 curAnimation = "eating";
@@ -96,6 +98,7 @@ public class Zombie : MonoBehaviour
         if(freeze) Freeze();
         if (health <= 0 && curAnimation != "death")
         {
+            curAnimation = "death";
             Die(type.deathAnimation);
         }
     }
@@ -114,8 +117,6 @@ public class Zombie : MonoBehaviour
 
     public void Die(RuntimeAnimatorController dieAnimation)
     {
-        if (!gameObject) return;
-        curAnimation = "death";
         GetComponent<Animator>().enabled = true;
         if (dieAnimation)
         {
@@ -127,13 +128,14 @@ public class Zombie : MonoBehaviour
             Destroy(gameObject, 0f);
         }
         GameObject spawner = GameObject.Find("ZombieSpawner");
-        if(spawner != null) {
-            ZombieSpawner zombieSpawner = spawner.GetComponent<ZombieSpawner>();
-            zombieSpawner.zombiesKilled++;
-            if (zombieSpawner.zombiesKilled >= zombieSpawner.zombieMax)
-            {
-                GameObject.Find("GameManager").GetComponent<GameManager>().Win();
-            }
+
+        ZombieSpawner zombieSpawner = spawner.GetComponent<ZombieSpawner>();
+        zombieSpawner.zombiesKilled++;
+        if (zombieSpawner.zombiesKilled >= zombieSpawner.zombieMax)
+        {
+          
+            GameObject.Find("GameManager").GetComponent<GameManager>().Win();
+            
         }
     }
 

@@ -32,13 +32,10 @@ public class Squash : MonoBehaviour
         {
             try
             {
-                //GetComponent<Plant>().Destroy();
-                Plant parent = gameObject.GetComponentInParent<Plant>();
-                if (parent != null )
-                {
-                    parent.Destroy();
-                }
-                //Destroy(gameObject, .2f);
+                Plant plant = gameObject.GetComponentInParent<Plant>();
+
+                plant.Destroy();
+                Destroy(gameObject, 0.2f);
             }
             catch
             {

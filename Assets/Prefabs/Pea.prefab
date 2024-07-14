@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5ca2e7436c05d49bbe613cdc2c3227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  speed: 4
+  damage: 2.5
+  speed: 5
   freeze: 0
   direction: 2
   laneWidth: 1.66

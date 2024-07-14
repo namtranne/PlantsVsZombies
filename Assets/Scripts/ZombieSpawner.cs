@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,143 +14,117 @@ public class ZombieSpawner : MonoBehaviour
     public int zombiesSpawned;
     public int zombiesKilled;
     public Slider progressBar;
-    public float baseZombieDelay = 5;
+    public float zombieDelay = 5;
 
-    public int level;
-    public float difficultyMultiplier = 0.5f;
 
-    private float currentZombieDelay;
-    private float timeSinceLastSpawn;
-    private int waveNumber = 0;
-    private List<ZombieTypes> currentWave = new List<ZombieTypes>();
+    private bool flagStart = false;
+    // private LevelManager levelManager;
 
-    private float eventCooldown = 30f;
-    private float timeSinceLastEvent = 0f;
-
-    public float initialPeacePeriod = 30f; // Time at the start for players to set up
-    private float peacePeriodTimer;
-
-    private void Start()
-    {
-        StartLevel(level);
-        progressBar.maxValue = zombieMax;
-        peacePeriodTimer = initialPeacePeriod;
-    }
-
+    // Start is called before the first frame update
     private void Update()
     {
-        if (peacePeriodTimer > 0)
-        {
-            peacePeriodTimer -= Time.deltaTime;
-            return;
-        }
+        if (GameManager.isSelecting || flagStart) return;
 
-        timeSinceLastSpawn += Time.deltaTime;
-        if (timeSinceLastSpawn >= currentZombieDelay && zombiesSpawned < zombieMax)
-        {
-            SpawnZombie();
-            timeSinceLastSpawn = 0;
-        }
+        flagStart = true;
+        Debug.Log("Start level");
+        StartLevel(GameManager.level);
+        InvokeRepeating("SpawnZombie", (int)(zombieDelay * 2.5), zombieDelay);
 
-        timeSinceLastEvent += Time.deltaTime;
-        if (timeSinceLastEvent >= eventCooldown)
-        {
-            TriggerRandomEvent();
-            timeSinceLastEvent = 0f;
-        }
+        progressBar.maxValue = zombieMax;
     }
 
     public void StartLevel(int level)
     {
-        zombieMax = 60 + 40 * level;
-        baseZombieDelay = Mathf.Max(5f - 0.2f * level, 0.5f);
-        currentZombieDelay = baseZombieDelay;
+        zombieMax = 60 + 30*level;
+        zombieDelay = 6f - .1f * level;
         progressBar.maxValue = zombieMax;
-        zombiesSpawned = 0;
-        zombiesKilled = 0;
-        waveNumber = 0;
 
-        UpdateZombieProbabilities(level);
-        PrepareNextWave();
-    }
-
-    private void UpdateZombieProbabilities(int level)
-    {
         float totalWeight = 0f;
-        int baseProbability = 10;
+        int baseProbability = 10; // Base probability
+        float difficultyFactor = 1.2f; // Increasing difficulty with level
+
 
         for (int i = 0; i < zombieTypes.Length; i++)
         {
-            float adjustedProbability = baseProbability + Mathf.FloorToInt(Mathf.Pow(difficultyMultiplier, i) * level * 2);
+            float adjustedProbability = baseProbability + Mathf.FloorToInt(Mathf.Pow(difficultyFactor, i) * level);
             totalWeight += adjustedProbability;
             zombieTypes[i].probability = totalWeight;
         }
 
+        // Normalize cumulative probabilities
         for (int i = 0; i < zombieTypes.Length; i++)
         {
             zombieTypes[i].probability /= totalWeight;
         }
     }
 
-    private void PrepareNextWave()
+    void SpawnZombie()
     {
-        waveNumber++;
-        currentWave.Clear();
-        int waveSize = Mathf.Min(5 + waveNumber * 2, 20);
-
-        for (int i = 0; i < waveSize; i++)
+        if (zombiesSpawned >= zombieMax) return;
+        if (GameManager.isPaused) return;
+        float percentage = 1f * zombiesSpawned / zombieMax;
+        if (percentage >= 1) return;
+        if (zombiesSpawned <= 6)
         {
-            currentWave.Add(SelectZombieType());
+            Debug.Log("Tren 6");
+            InstantiateNewZombie(1);
         }
-
-        if (waveNumber % 2 == 0 && waveNumber / 2 < zombieTypes.Length)
+        else if (zombiesSpawned <= 12)
         {
-            currentWave.Add(zombieTypes[waveNumber / 2].type);
+            Debug.Log("Tren 12");
+            InstantiateNewZombie(1);
+            InstantiateNewZombie(1);
         }
-
-        for (int i = 0; i < currentWave.Count; i++)
+        else if (percentage < .2f)
         {
-            ZombieTypes temp = currentWave[i];
-            int randomIndex = Random.Range(i, currentWave.Count);
-            currentWave[i] = currentWave[randomIndex];
-            currentWave[randomIndex] = temp;
+            Debug.Log("Tren 0.2");
+            InstantiateNewZombie(2);
+            InstantiateNewZombie(2);
         }
-
-        currentZombieDelay = baseZombieDelay * Mathf.Pow(0.9f, waveNumber - 1);
+        else if (percentage < .4f)
+        {
+            Debug.Log("Tren 0.4");
+            InstantiateNewZombie(2);
+            InstantiateNewZombie(2);
+            InstantiateNewZombie(2);
+        }
+        else if (percentage < .6f)
+        {
+            Debug.Log("Tren 0.6");
+            InstantiateNewZombie(3);
+            InstantiateNewZombie(3);
+            InstantiateNewZombie(3);
+        }
+        else if (percentage < .8f)
+        {
+            Debug.Log("Tren 0.8");
+            InstantiateNewZombie(4);
+            InstantiateNewZombie(4);
+            InstantiateNewZombie(4);
+        }
+        else
+        {
+            Debug.Log("Stopp");
+            CancelInvoke("SpawnZombie");
+            for (int i = zombiesSpawned; i < zombieMax; i++)
+            {
+                InstantiateNewZombie(4);
+            }
+        }
     }
 
-    private void SpawnZombie()
+    void InstantiateNewZombie(int xBoost = 3)
     {
-        if (currentWave.Count == 0)
-        {
-            PrepareNextWave();
-        }
-
-        ZombieTypes typeToSpawn = currentWave[0];
-        currentWave.RemoveAt(0);
-
-        int spawnPosition = SelectSpawnPoint();
+        if (zombiesSpawned >= zombieMax) return;
+        
+        int spawnPosition = Random.Range(0, spawnPoints.Length);
         GameObject myZombie = Instantiate(zombie, spawnPoints[spawnPosition].position, Quaternion.identity);
-        Zombie zombieComponent = myZombie.GetComponent<Zombie>();
-        zombieComponent.type = typeToSpawn;
-        zombieComponent.health = typeToSpawn.health * (1 + 0.1f * level);
-        zombieComponent.speed = typeToSpawn.speed * (1 + 0.05f * level);
-        myZombie.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
-
         zombiesSpawned++;
         progressBar.value = zombiesSpawned;
-
-        if (zombiesSpawned >= zombieMax)
-        {
-            TriggerFinalWave();
-        }
+        myZombie.GetComponent<Zombie>().type = SelectZombieType();
+        myZombie.GetComponent<Zombie>().xBoost = xBoost;
+        myZombie.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
     }
-
-    private int SelectSpawnPoint()
-    {
-        return Random.Range(0, spawnPoints.Length);
-    }
-
     private ZombieTypes SelectZombieType()
     {
         float randomValue = Random.value;
@@ -163,127 +137,9 @@ public class ZombieSpawner : MonoBehaviour
             }
         }
 
-        return zombieTypes[zombieTypes.Length - 1].type;
-    }
-
-    private void TriggerFinalWave()
-    {
-        int finalWaveSize = Mathf.Min(zombieMax - zombiesSpawned, 30);
-        for (int i = 0; i < finalWaveSize; i++)
-        {
-            ZombieTypes finalZombieType = zombieTypes[Mathf.Min(i / 3, zombieTypes.Length - 1)].type;
-            currentWave.Add(finalZombieType);
-        }
-        currentZombieDelay = 0.3f;
-    }
-
-    private void TriggerRandomEvent()
-    {
-        int eventType = Random.Range(0, 5);
-
-        switch (eventType)
-        {
-            case 0:
-                SpeedBoost();
-                break;
-            case 1:
-                ZombieHorde();
-                break;
-            case 2:
-                ZombieUpgrade();
-                break;
-            case 3:
-                ZombieWeakness();
-                break;
-            case 4:
-                ZombieFrenzy();
-                break;
-        }
-    }
-
-    private void SpeedBoost()
-    {
-        StartCoroutine(TemporarySpeedBoost());
-    }
-
-    private IEnumerator TemporarySpeedBoost()
-    {
-        Zombie[] zombies = FindObjectsOfType<Zombie>();
-        foreach (Zombie zombie in zombies)
-        {
-            zombie.speed *= 2.5f;
-        }
-
-        yield return new WaitForSeconds(15f);
-
-        foreach (Zombie zombie in zombies)
-        {
-            if (zombie != null)
-            {
-                zombie.speed = zombie.type.speed * (1 + 0.05f * level);
-            }
-        }
-    }
-
-    private void ZombieHorde()
-    {
-        int extraZombies = Random.Range(10, 21);
-        for (int i = 0; i < extraZombies; i++)
-        {
-            SpawnZombie();
-        }
-    }
-
-    private void ZombieUpgrade()
-    {
-        Zombie[] zombies = FindObjectsOfType<Zombie>();
-        foreach (Zombie zombie in zombies)
-        {
-            zombie.health *= 2f;
-            zombie.damage *= 1.5f;
-        }
-    }
-
-    private void ZombieWeakness()
-    {
-        StartCoroutine(TemporaryWeakness());
-    }
-
-    private IEnumerator TemporaryWeakness()
-    {
-        Zombie[] zombies = FindObjectsOfType<Zombie>();
-        foreach (Zombie zombie in zombies)
-        {
-            zombie.health *= 0.3f;
-        }
-
-        yield return new WaitForSeconds(10f);
-
-        foreach (Zombie zombie in zombies)
-        {
-            if (zombie != null)
-            {
-                zombie.health = zombie.type.health * (1 + 0.1f * level);
-            }
-        }
-    }
-
-    private void ZombieFrenzy()
-    {
-        StartCoroutine(TemporaryFrenzy());
-    }
-
-    private IEnumerator TemporaryFrenzy()
-    {
-        float originalDelay = currentZombieDelay;
-        currentZombieDelay = 0.1f;
-
-        yield return new WaitForSeconds(8f);
-
-        currentZombieDelay = originalDelay;
+        return zombieTypes[zombieTypes.Length - 1].type; // Fallback to the last type
     }
 }
-
 [System.Serializable]
 public class ZombieTypeProb
 {

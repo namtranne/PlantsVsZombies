@@ -20,8 +20,7 @@ public class SunFlower : MonoBehaviour
 
     private void SetNextSpawnTime()
     {
-        float randomCooldown = baseCooldown + Random.Range(-cooldownVariation, cooldownVariation);
-        nextSpawnTime = Time.time + randomCooldown;
+        nextSpawnTime = Time.time + 10;
     }
 
     private IEnumerator SpawnSunRoutine()
@@ -43,7 +42,7 @@ public class SunFlower : MonoBehaviour
     private IEnumerator SpawnSunAnimation()
     {
   
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
     }
 
     private void SpawnSun()

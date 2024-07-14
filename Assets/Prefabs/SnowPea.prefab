@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
-  speed: 6
+  speed: 5
   freeze: 1
   direction: 2
   laneWidth: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1f1c88c5d3480418e3dae6bd84b280, type: 3}
   m_Name: BucketheadZombie
   m_EditorClassIdentifier: 
-  health: 20
+  health: 25
   speed: 0.0045
   damage: 2
   range: 0.25
@@ -21,5 +21,13 @@ MonoBehaviour:
   eatAnimation: {fileID: 9100000, guid: 90d95e128d0a44b5dbe8afba03c7eba9, type: 2}
   deathAnimation: {fileID: 9100000, guid: d5214a7f2b8544296a01e120f771bc3c, type: 2}
   animator: {fileID: 9100000, guid: 04ed28d5db6a8a84892e3b5383888d66, type: 2}
-  hitClips:
-  - {fileID: 8300000, guid: 494888dab0e7c4f7c85bd1fbab03a873, type: 3}
+  hitClip: {fileID: 0}
+  chat: {fileID: 0}
+  avatar: {fileID: 0}
+  portrait: {fileID: 0}
+  ultimateEffect: {fileID: 0}
+  newAvatar: {fileID: 0}
+  guardAudioSource: {fileID: 0}
+  teleAudioSource: {fileID: 0}
+  ultimateAudioSource: {fileID: 0}
+  attackAudioSource: {fileID: 0}

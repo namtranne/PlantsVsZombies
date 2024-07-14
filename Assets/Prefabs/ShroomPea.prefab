@@ -99,11 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5ca2e7436c05d49bbe613cdc2c3227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 1.4
   speed: 6
   freeze: 0
   direction: 2
-  angle: 0.03490658
+  laneWidth: 0
 --- !u!50 &-4993878501252284211
 Rigidbody2D:
   serializedVersion: 4
