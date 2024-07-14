@@ -45,6 +45,7 @@ public class Zombie : MonoBehaviour
 
     void Groan()
     {
+        audioSource.volume = GameManager.soundVolume;
         audioSource.PlayOneShot(groans[Random.Range(0, groans.Length)]);
     }
 
@@ -97,6 +98,7 @@ public class Zombie : MonoBehaviour
 
     public void Hit(float damage, bool freeze)
     {
+        audioSource.volume = GameManager.soundVolume;
         audioSource.PlayOneShot(type.hitClips[Random.Range(0, type.hitClips.Length)]);
         health -= damage;
         if(freeze) Freeze();

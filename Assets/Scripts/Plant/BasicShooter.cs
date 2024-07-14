@@ -67,6 +67,7 @@ public class BasicShooter : MonoBehaviour
     {
         if(!canShoot) return;
 
+        shootSource.volume = GameManager.soundVolume;
         shootSource.PlayOneShot(shootClips[Random.Range(0, shootClips.Length)]);
 
         canShoot = false;

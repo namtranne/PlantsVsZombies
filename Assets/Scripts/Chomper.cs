@@ -66,6 +66,7 @@ public class Chomper : MonoBehaviour
         if (!isDigesting)
         {
             // Play bite audio
+            biteAudioSource.volume = GameManager.soundVolume;
             biteAudioSource.PlayOneShot(biteClip);
 
             // Start bite timer

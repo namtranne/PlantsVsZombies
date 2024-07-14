@@ -20,8 +20,10 @@ public class LawnMower : MonoBehaviour
     {
         if (other.gameObject.layer == 7)
         {
-            if (!isMoving)
+            if (!isMoving) {
+                mowerSource.volume = GameManager.soundVolume;
                 mowerSource.PlayOneShot(sound);
+            }
             other.GetComponent<Zombie>().Hit(1000, false);
             isMoving = true;
 

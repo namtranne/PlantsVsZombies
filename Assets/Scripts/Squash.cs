@@ -54,6 +54,7 @@ public class Squash : MonoBehaviour
     {
         if (other.TryGetComponent<Zombie>(out Zombie zombie) && !smashed)
         {
+            squashAudioSource.volume = GameManager.soundVolume;
             squashAudioSource.PlayOneShot(aimClip);
             AimZombie(zombie);
         }
@@ -82,6 +83,7 @@ public class Squash : MonoBehaviour
     private IEnumerator SmashSuccess(Zombie zombie)
     {
         yield return new WaitForSeconds(smashDuration);
+        squashAudioSource.volume = GameManager.soundVolume;
         squashAudioSource.PlayOneShot(smashClip);
         smashed = true;
         zombie.BeSmashed(.2f);

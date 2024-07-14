@@ -53,6 +53,7 @@ public class ScroomShoot : MonoBehaviour
         if (!canShoot) return;
         if (GetComponent<Animator>().GetBool("scary")) return;
 
+        shootSource.volume = GameManager.soundVolume;
         shootSource.PlayOneShot(shootClips[Random.Range(0, shootClips.Length)]);
 
         canShoot = false;
