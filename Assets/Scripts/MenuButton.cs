@@ -33,6 +33,7 @@ public class MenuButton : MonoBehaviour
         {
             panel.SetActive(true);
             panel.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            GameManager.Pausing();
 
 
             Animator[] allAnimators = FindObjectsOfType<Animator>();

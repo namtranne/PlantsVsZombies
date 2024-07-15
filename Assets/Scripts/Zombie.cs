@@ -93,6 +93,7 @@ public class Zombie : MonoBehaviour
     public virtual void Hit(float damage, bool freeze)
     {
         if (!gameObject) return;
+        audioSource.volume = GameManager.soundVolume;
         audioSource.PlayOneShot(hitClip);
         health -= damage;
         if(freeze) Freeze();

@@ -53,6 +53,7 @@ public class BowlingGameManager : MonoBehaviour
     
     void Plant(GameObject hitObject)
     {
+        plantSource.volume = GameManager.soundVolume;
         plantSource.PlayOneShot(plantSFX);
         Instantiate(currentPlant, hitObject.transform.position, Quaternion.identity);
         currentPlant = null;

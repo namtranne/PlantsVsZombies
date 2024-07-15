@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,8 +19,10 @@ public class GameManager : MonoBehaviour
 
     public AudioClip plantSFX;
     public AudioClip sunSFX;
+    public AudioClip backgroundSFX;
     private AudioSource plantSource;
     public AudioSource sunSource;
+    private AudioSource backgroundSource;
 
     private bool isDragging = false;
     private GameObject draggedPlantInstance;
@@ -29,6 +32,15 @@ public class GameManager : MonoBehaviour
     public static bool isSelecting = true;
     public static bool isPaused = true;
     public static int level = 1;
+
+    public GameObject winningOverlayPanel;
+    public TextMeshProUGUI winningMessageText;
+    public TextMeshProUGUI nextLevelText;
+
+    public Slider musicSlider;
+    public Slider soundFxSlider;
+    public static float musicVolume;
+    public static float soundVolume;
 
     public float gameTime { get; private set; }
 
@@ -49,6 +61,30 @@ public class GameManager : MonoBehaviour
         isSelecting = true;
         isPaused = true;
         gameTime = 0f;
+
+        if (winningOverlayPanel != null)
+        {
+            winningOverlayPanel.SetActive(false);
+        }
+
+        // Set initial settings
+        musicVolume = 1f;
+        soundVolume = 1f;
+        musicSlider.value = musicVolume;
+        soundFxSlider.value = soundVolume;
+
+        // Add listeners to the sliders
+        musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        soundFxSlider.onValueChanged.AddListener(SetSoundFxVolume);
+
+        // Play the background music
+        if (backgroundSFX != null)
+        {
+            backgroundSource = gameObject.AddComponent<AudioSource>();
+            backgroundSource.clip = backgroundSFX;
+            backgroundSource.loop = true;
+            backgroundSource.Play();
+        }
     }
 
     public void ChoosePlant(GameObject plant, Sprite sprite, int price)
@@ -106,6 +142,7 @@ public class GameManager : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 sunSource.pitch = UnityEngine.Random.Range(.9f, 1.1f);
+                sunSource.volume = soundVolume;
                 sunSource.PlayOneShot(sunSFX);
                 suns += 25;
                 Destroy(sunHit.collider.gameObject);
@@ -125,21 +162,40 @@ public class GameManager : MonoBehaviour
 
     void Plant(GameObject hitObject)
     {
+        plantSource.volume = soundVolume;
         plantSource.PlayOneShot(plantSFX);
         GameObject plant = Instantiate(currentPlant, hitObject.transform.position, Quaternion.identity);
         hitObject.GetComponent<Tile>().hasPlant = true;
         plant.GetComponent<Plant>().tile = hitObject.GetComponent<Tile>();
     }
 
-    public void Win()
+    private IEnumerator ShowWinningOverlay()
     {
+        // Update the winning message and next level text
+        winningMessageText.text = $"Congratulations! You completed Level {level}!";
+        nextLevelText.text = $"Get ready for Level {level + 1}!";
+
+        // Activate the overlay panel
+        winningOverlayPanel.SetActive(true);
+
+        // Wait for a few seconds
+        yield return new WaitForSeconds(3f);
+
+        // Load the next level
         if (SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCountInBuildSettings)
         {
             level++;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            return;
+            yield return null;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void Win()
+    {
+        isPaused = true;
+        StartCoroutine(ShowWinningOverlay());
+        isPaused = false;
     }
 
     public void StartGame()
@@ -149,11 +205,25 @@ public class GameManager : MonoBehaviour
         isPaused = false;
     }
 
+    public void SetMusicVolume(float volume)
+    {
+        if (backgroundSource)
+        {
+            backgroundSource.volume = volume;
+        }
+    }
+
+    public void SetSoundFxVolume(float volume)
+    {
+        soundVolume = volume;
+    }
+
     public void AddSun(int value)
     {
         suns += value;
         sunText.text = suns.ToString();
         sunSource.pitch = UnityEngine.Random.Range(.9f, 1.1f);
+        sunSource.volume = soundVolume;
         sunSource.PlayOneShot(sunSFX);
     }
 

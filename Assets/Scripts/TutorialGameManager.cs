@@ -256,6 +256,7 @@ public class TutorialGameManager : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 sunSource.pitch = Random.Range(.9f, 1.1f);
+                sunSource.volume = GameManager.soundVolume;
                 sunSource.PlayOneShot(sunSFX);
                 suns += 25;
                 Destroy(sunHit.collider.gameObject);
@@ -328,6 +329,7 @@ public class TutorialGameManager : MonoBehaviour
 
     private void Plant(GameObject hitObject)
     {
+        plantSource.volume = GameManager.soundVolume;
         plantSource.PlayOneShot(plantSFX);
         GameObject plant = Instantiate(currentPlant, hitObject.transform.position, Quaternion.identity);
         hitObject.GetComponent<Tile>().hasPlant = true;
