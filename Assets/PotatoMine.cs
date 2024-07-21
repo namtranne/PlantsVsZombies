@@ -36,6 +36,7 @@ public class PotatoMine : MonoBehaviour
         yield return new WaitForSeconds(delay);
         Destroy(target);
         yield return new WaitForSeconds(delay);
+        GetComponent<Plant>().Destroy();
         Destroy(gameObject);
     }
 }

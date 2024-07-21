@@ -36,7 +36,7 @@ public class BowlingExplode : MonoBehaviour
             }
             else {
                 zombieSet.Add(zombie);
-                zombie.BowlingHit();
+                zombie.Hit(100000, false);
             }
             
         }

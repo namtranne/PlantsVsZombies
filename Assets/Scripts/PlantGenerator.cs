@@ -26,7 +26,6 @@ public class PlantGenerator : MonoBehaviour
 
     IEnumerator AddObjectsAtRandomIntervals()
     {
-        AddNewObject();
         while (true)
         {
             float waitTime = Random.Range(3f, 6f);
@@ -46,6 +45,7 @@ public class PlantGenerator : MonoBehaviour
 
     void AddNewObject()
     {
+        if (GameManager.isPaused) return;
         if (prefab == null || layoutGroup == null)
         {
             Debug.LogError("Prefab or Layout Group not assigned.");

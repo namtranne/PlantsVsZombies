@@ -26,12 +26,12 @@ public class PlantSlot : MonoBehaviour, IPointerDownHandler
     {
         if (gameManager.suns >= price)
         {
-            // background.color = Color.white;
+            background.color = Color.white;
             plantImage.color = Color.white;
         }
         else
         {
-            // background.color = Color.gray;
+            background.color = Color.gray;
             plantImage.color = Color.gray;
         }
     }
@@ -51,7 +51,7 @@ public class PlantSlot : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (gameManager.suns >= price && !gameManager.currentPlant)
+        if (!GameManager.isSelecting && !GameManager.isPaused && gameManager.suns >= price && !gameManager.currentPlant)
         {
             gameManager.ChoosePlant(plantObject, plantSprite, price);
             gameManager.StartDragging();

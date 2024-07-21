@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using TMPro;
 using UnityEngine;
@@ -7,19 +8,19 @@ using UnityEngine.UI;
 public class LoadSavedLevel : MonoBehaviour
 {
     public TextMeshProUGUI levelText;
-    //public Button continueButton;
+    public Button continueButton;
     private string filePath;
 
     private void Start()
     {
         // Path where the current level is saved
         filePath = Application.dataPath + "/currentLevel.txt";
-        
+
         // Add a listener to the continue button
-        //if (continueButton != null)
-        //{
-        //    continueButton.onClick.AddListener(ContinueGame);
-        //}
+        if (continueButton != null)
+        {
+            continueButton.onClick.AddListener(ContinueGame);
+        }
 
         // Load the saved level and display it in the Text UI element
         LoadLevelText();
@@ -45,8 +46,14 @@ public class LoadSavedLevel : MonoBehaviour
         if (File.Exists(filePath))
         {
             string savedLevel = File.ReadAllText(filePath);
-            // Use savedLevel to load the correct scene
-            SceneManager.LoadScene(3);
+            GameManager.level = Int32.Parse(savedLevel);
+            if (GameManager.level < 3)
+            {
+                SceneManager.LoadScene(GameManager.level);
+            }
+            else if (GameManager.level % 5 == 0)
+                SceneManager.LoadScene(4);
+            else SceneManager.LoadScene(3);
         }
         else
         {

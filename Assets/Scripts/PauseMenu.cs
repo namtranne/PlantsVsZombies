@@ -73,7 +73,7 @@ public class PauseMenu : MonoBehaviour
     {
         // Save current level to a file
         string filePath = Application.dataPath + "/currentLevel.txt";
-        string currentLevel = "1";
+        string currentLevel = GameManager.level.ToString();
 
         File.WriteAllText(filePath, currentLevel);
         Debug.Log("Current level saved to " + filePath);     

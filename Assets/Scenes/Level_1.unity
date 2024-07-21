@@ -3648,7 +3648,7 @@ MonoBehaviour:
   background: {fileID: 0}
   plantImage: {fileID: 515870976}
   plantSprite: {fileID: 21300000, guid: 39135b176220c6f48886c6e714229eaa, type: 3}
-  plantObject: {fileID: 3359103422527997184, guid: 1a5f6b27a11a7e547af349b68233e3e7, type: 3}
+  plantObject: {fileID: 3359103422527997184, guid: 79dba14afdf926c4482f0f2be7b61b79, type: 3}
   priceText: {fileID: 825474689}
   price: 50
 --- !u!1 &1888940784

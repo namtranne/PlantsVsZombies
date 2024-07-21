@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50
+  m_text: 100
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a904ba6f2321441e9bd8083e0b6f4dc4, type: 2}
   m_sharedMaterial: {fileID: 4814582654593467135, guid: a904ba6f2321441e9bd8083e0b6f4dc4, type: 2}
@@ -267,7 +267,7 @@ MonoBehaviour:
   plantSprite: {fileID: 21300000, guid: 0477dfb539c148b439c53bc06da61c29, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: acec83cd50db0d94fbd594b6c7ab6c77, type: 3}
   priceText: {fileID: 8263746842524101069}
-  price: 50
+  price: 100
 --- !u!114 &5559743771536149270
 MonoBehaviour:
   m_ObjectHideFlags: 0

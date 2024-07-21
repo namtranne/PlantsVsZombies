@@ -188,13 +188,14 @@ public class Zombie : MonoBehaviour
 
     public void BeBited(float delay = 0)
     {
-        if (!gameObject) return;
-        Destroy(gameObject, delay);
-        ZombieSpawner zombieSpawner = GameObject.Find("ZombieSpawner").GetComponent<ZombieSpawner>();
-        zombieSpawner.zombiesKilled++;
-        if (zombieSpawner.zombiesKilled >= zombieSpawner.zombieMax)
+        try
         {
-            GameObject.Find("GameManager").GetComponent<GameManager>().Win();
+            if (curAnimation != "death")
+                Die(null);
+        }
+        catch
+        {
+            Debug.Log("Zombie is Die");
         }
     }
 

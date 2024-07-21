@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     public static bool isSelecting = true;
     public static bool isPaused = true;
-    public static int level = 1;
+    public static int level = 2;
 
     public GameObject winningOverlayPanel;
     public TextMeshProUGUI winningMessageText;
@@ -41,6 +41,10 @@ public class GameManager : MonoBehaviour
     public Slider soundFxSlider;
     public static float musicVolume;
     public static float soundVolume;
+
+    public bool isBowling;
+    public GameObject plant;
+    public GameObject currentSelectedSlot;
 
     public float gameTime { get; private set; }
 
@@ -58,8 +62,9 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         plantSource = GetComponent<AudioSource>();
-        isSelecting = true;
-        isPaused = true;
+        isSelecting = !isBowling;
+        isPaused = !isBowling;
+        if (level <= 2) { isSelecting = false; isPaused = false; }
         gameTime = 0f;
 
         if (winningOverlayPanel != null)
@@ -103,29 +108,42 @@ public class GameManager : MonoBehaviour
 
         if (isPaused) return;
 
-        sunText.text = suns.ToString();
+        if (!isBowling) sunText.text = suns.ToString();
 
+        Debug.Log("isDragging" + isDragging);
+        Debug.Log("currentPlant" + currentPlant);
         if (isDragging && currentPlant)
         {
+            Debug.Log("abc");
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0;
 
             if (draggedPlantInstance == null)
             {
+                Debug.Log("abc");
                 draggedPlantInstance = new GameObject("DraggedPlant");
                 var spriteRenderer = draggedPlantInstance.AddComponent<SpriteRenderer>();
                 spriteRenderer.sprite = currentPlantSprite;
+                spriteRenderer.sortingOrder = 100;
             }
 
             draggedPlantInstance.transform.position = mousePosition;
             if (Input.GetMouseButtonUp(0))
             {
+                Debug.Log("abc");
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, tileMask);
 
                 if (hit.collider && !hit.collider.GetComponent<Tile>().hasPlant)
                 {
-                    Plant(hit.collider.gameObject);
-                    suns -= currentPlantPrice;
+                    if (isBowling)
+                    {
+                        BowlingPlant(hit.collider.gameObject);
+                        Destroy(currentSelectedSlot);
+                    } else
+                    {
+                        Plant(hit.collider.gameObject);
+                        suns -= currentPlantPrice;
+                    }
                 }
 
                 currentPlant = null;
@@ -135,6 +153,7 @@ public class GameManager : MonoBehaviour
                 isDragging = false;
             }
         }
+
 
         RaycastHit2D sunHit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, sunMask);
         if (sunHit.collider)
@@ -148,6 +167,22 @@ public class GameManager : MonoBehaviour
                 Destroy(sunHit.collider.gameObject);
             }
         }
+    }
+    void BowlingPlant(GameObject hitObject)
+    {
+        plantSource.volume = GameManager.soundVolume;
+        plantSource.PlayOneShot(plantSFX);
+        Instantiate(currentPlant, hitObject.transform.position, Quaternion.identity);
+        currentPlant = null;
+        currentPlantSprite = null;
+    }
+
+    public void BowlingChoosePlant(BowlingType bowlingType, GameObject gameObject)
+    {
+        currentPlant = plant;
+        currentPlant.GetComponent<BowlingWallnut>().SetBowlingType(bowlingType);
+        currentPlantSprite = bowlingType.sprite;
+        currentSelectedSlot = gameObject;
     }
 
     public void StartDragging()
@@ -169,6 +204,7 @@ public class GameManager : MonoBehaviour
         plant.GetComponent<Plant>().tile = hitObject.GetComponent<Tile>();
     }
 
+
     private IEnumerator ShowWinningOverlay()
     {
         // Update the winning message and next level text
@@ -180,12 +216,12 @@ public class GameManager : MonoBehaviour
 
         // Wait for a few seconds
         yield return new WaitForSeconds(3f);
-
         // Load the next level
-        if (SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCountInBuildSettings)
+        if (SceneManager.GetActiveScene().buildIndex >= 2)
         {
-            level++;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (level % 5 == 0)
+                SceneManager.LoadScene(4);
+            else SceneManager.LoadScene(3);
             yield return null;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -194,6 +230,7 @@ public class GameManager : MonoBehaviour
     public void Win()
     {
         isPaused = true;
+        level++;
         StartCoroutine(ShowWinningOverlay());
         isPaused = false;
     }
@@ -236,6 +273,8 @@ public class GameManager : MonoBehaviour
     {
         return suns >= cost;
     }
+
+
 
     public void SpendSun(int cost)
     {

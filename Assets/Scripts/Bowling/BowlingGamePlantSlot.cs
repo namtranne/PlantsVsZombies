@@ -1,17 +1,19 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class BowlingGamePlantSlot : MonoBehaviour
+public class BowlingGamePlantSlot : MonoBehaviour, IPointerDownHandler
 {
 
     public Image plantImage;
     public Sprite plantSprite;
     public GameObject plantObject;
-    private BowlingGameManager gameManager;
-    public Button button;
+    //private BowlingGameManager gameManager;
+    private GameManager gameManager;
+    //public Button button;
 
     public LayerMask plantSlotMask;
     public BowlingType bowlingType;
@@ -21,13 +23,18 @@ public class BowlingGamePlantSlot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("BowlingGameManager").GetComponent<BowlingGameManager>();
-        button.onClick.AddListener(BuyPlant);
+        //gameManager = GameObject.Find("BowlingGameManager").GetComponent<BowlingGameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        //button.onClick.AddListener(BuyPlant);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.isPaused)
+        {
+            return;
+        }
         RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.left, 1, plantSlotMask);
         bool stopMoving = false;
         for(int i =0 ; i< hits.Length ; i++) {
@@ -44,8 +51,9 @@ public class BowlingGamePlantSlot : MonoBehaviour
 
     // void OnTriggerEnter
 
-    private void BuyPlant() {
-        gameManager.BuyPlant(bowlingType, gameObject);
+    private void BuyPlant()
+    {
+        gameManager.BowlingChoosePlant(bowlingType, gameObject);
     }
 
     private void OnValidate() {
@@ -63,5 +71,11 @@ public class BowlingGamePlantSlot : MonoBehaviour
         plantImage.enabled = true;
         plantImage.sprite = bowlingType.sprite;
         plantSprite = bowlingType.sprite;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        gameManager.BowlingChoosePlant(bowlingType, gameObject);
+        gameManager.StartDragging();
     }
 }

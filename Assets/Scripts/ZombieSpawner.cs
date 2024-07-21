@@ -19,6 +19,10 @@ public class ZombieSpawner : MonoBehaviour
 
     private bool flagStart = false;
     // private LevelManager levelManager;
+    private void Start()
+    {
+        flagStart = false;
+    }
 
     // Start is called before the first frame update
     private void Update()
@@ -26,7 +30,7 @@ public class ZombieSpawner : MonoBehaviour
         if (GameManager.isSelecting || flagStart) return;
 
         flagStart = true;
-        Debug.Log("Start level");
+        Debug.Log("Start level" + GameManager.level);
         StartLevel(GameManager.level);
         InvokeRepeating("SpawnZombie", (int)(zombieDelay * 2.5), zombieDelay);
 
@@ -35,8 +39,8 @@ public class ZombieSpawner : MonoBehaviour
 
     public void StartLevel(int level)
     {
-        zombieMax = 60 + 30*level;
-        zombieDelay = 6f - .1f * level;
+        zombieMax = 60 + 10* (level - 2);
+        zombieDelay = 6f - .1f * (level - 2);
         progressBar.maxValue = zombieMax;
 
         float totalWeight = 0f;
@@ -60,11 +64,20 @@ public class ZombieSpawner : MonoBehaviour
 
     void SpawnZombie()
     {
+        Debug.Log("SpawnZombie" + GameManager.isPaused);
         if (zombiesSpawned >= zombieMax) return;
         if (GameManager.isPaused) return;
         float percentage = 1f * zombiesSpawned / zombieMax;
         if (percentage >= 1) return;
-        if (zombiesSpawned <= 6)
+        if (percentage >= .8f) { 
+            Debug.Log("Stopp");
+            CancelInvoke("SpawnZombie");
+            for (int i = zombiesSpawned; i < zombieMax; i++)
+            {
+                InstantiateNewZombie(4);
+            }
+        }
+        else if (zombiesSpawned <= 6)
         {
             Debug.Log("Tren 6");
             InstantiateNewZombie(1);
@@ -75,27 +88,27 @@ public class ZombieSpawner : MonoBehaviour
             InstantiateNewZombie(1);
             InstantiateNewZombie(1);
         }
-        else if (percentage < .2f)
+        else if (zombiesSpawned <= 20)
         {
             Debug.Log("Tren 0.2");
             InstantiateNewZombie(2);
             InstantiateNewZombie(2);
         }
-        else if (percentage < .4f)
+        else if (zombiesSpawned < 40)
         {
             Debug.Log("Tren 0.4");
             InstantiateNewZombie(2);
             InstantiateNewZombie(2);
             InstantiateNewZombie(2);
         }
-        else if (percentage < .6f)
+        else if (zombiesSpawned < 60)
         {
             Debug.Log("Tren 0.6");
             InstantiateNewZombie(3);
             InstantiateNewZombie(3);
             InstantiateNewZombie(3);
         }
-        else if (percentage < .8f)
+        else if (zombiesSpawned < 90)
         {
             Debug.Log("Tren 0.8");
             InstantiateNewZombie(4);
@@ -104,12 +117,10 @@ public class ZombieSpawner : MonoBehaviour
         }
         else
         {
-            Debug.Log("Stopp");
-            CancelInvoke("SpawnZombie");
-            for (int i = zombiesSpawned; i < zombieMax; i++)
-            {
-                InstantiateNewZombie(4);
-            }
+            InstantiateNewZombie(5);
+            InstantiateNewZombie(5);
+            InstantiateNewZombie(5);
+            InstantiateNewZombie(5);
         }
     }
 

@@ -132,7 +132,6 @@ MonoBehaviour:
   plantImage: {fileID: 5543775099490909961}
   plantSprite: {fileID: -624967101, guid: cae67f875cc9f0b459dfdce920cf4704, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: dba8715485a82481aa5df40775177ad3, type: 3}
-  button: {fileID: 8440183741072823535}
   plantSlotMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -355,7 +354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2910977838142654557
 RectTransform:
   m_ObjectHideFlags: 0

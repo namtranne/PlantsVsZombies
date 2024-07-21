@@ -39,6 +39,7 @@ public class TutorialGameManager : MonoBehaviour
     private void Start()
     {
         plantSource = GetComponent<AudioSource>();
+        GameManager.isPaused = false;
     }
 
     public void ChoosePlant(GameObject plant, Sprite sprite, int price)
@@ -216,6 +217,7 @@ public class TutorialGameManager : MonoBehaviour
     {
         DestroyObject("ChatBlog(Clone)");
         ShowChat("Congratulations, you have completed the tutorial! Let's start your journey to protect your house from the ninjas.");
+        Invoke("Win", 4.0f);
     }
 
     private void HandleDragging()
@@ -343,7 +345,7 @@ public class TutorialGameManager : MonoBehaviour
             SceneManager.LoadScene(0);
             return;
         }
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   
     }
 
     public void SpawnSun()

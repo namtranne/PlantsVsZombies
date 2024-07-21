@@ -56,7 +56,7 @@ MonoBehaviour:
   plantSprite: {fileID: 1048718916, guid: a6fb7dca9e276aa41bd9ab6364d8654d, type: 3}
   plantObject: {fileID: 3359103422527997184, guid: 2401b5787b1c4c148b5c7a50c9ff5f50, type: 3}
   priceText: {fileID: 1701813890372660495}
-  price: 50
+  price: 25
 --- !u!1 &1538351906649502467
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50
+  m_text: 25
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a904ba6f2321441e9bd8083e0b6f4dc4, type: 2}
   m_sharedMaterial: {fileID: 4814582654593467135, guid: a904ba6f2321441e9bd8083e0b6f4dc4, type: 2}
