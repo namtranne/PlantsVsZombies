@@ -1,5 +1,5 @@
 using System;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
@@ -23,7 +23,6 @@ public class ZombieBoss : Zombie
 
     // Animation properties
     public Animator animator;
-    public AnimatorController animationController;
     public Sprite newAvatar;
     public GameObject ultimateEffect;
     public GameObject portrait;
