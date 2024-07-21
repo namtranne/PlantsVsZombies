@@ -227,7 +227,6 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
-        level++;
         isPaused = true;
         StartCoroutine(ShowWinningOverlay());
         isPaused = false;
@@ -280,7 +279,7 @@ public class GameManager : MonoBehaviour
 
     public void HandleTurnToNextLevel() 
     {
-        
+        level++;
         if (SceneManager.GetActiveScene().buildIndex >= 2)
         {
             if (level % 5 == 0)

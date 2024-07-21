@@ -3,27 +3,43 @@
   "WorkspaceRootPath": "D:\\Unity_Learn\\game\\PlantsVsZombies\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|d:\\unity_learn\\game\\plantsvszombies\\assets\\scripts\\plantgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\plantgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|d:\\unity_learn\\game\\plantsvszombies\\assets\\scripts\\newgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\newgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|d:\\unity_learn\\game\\plantsvszombies\\assets\\scripts\\bowling\\bowlinggameplantslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bowling\\bowlinggameplantslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|D:\\Unity_Learn\\game\\PlantsVsZombies\\assets\\scripts\\loadsavedlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\loadsavedlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|d:\\unity_learn\\game\\plantsvszombies\\assets\\scripts\\bowling\\bowlingwallnut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bowling\\bowlingwallnut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|d:\\unity_learn\\game\\plantsvszombies\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|D:\\Unity_Learn\\game\\PlantsVsZombies\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|d:\\unity_learn\\game\\plantsvszombies\\assets\\scripts\\bowlingexplode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|D:\\Unity_Learn\\game\\PlantsVsZombies\\assets\\scripts\\zombieboss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombieboss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|D:\\Unity_Learn\\game\\PlantsVsZombies\\assets\\scripts\\bowlingexplode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bowlingexplode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|d:\\unity_learn\\game\\plantsvszombies\\assets\\scripts\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|D:\\Unity_Learn\\game\\PlantsVsZombies\\assets\\scripts\\bowling\\bowlingwallnut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bowling\\bowlingwallnut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|D:\\Unity_Learn\\game\\PlantsVsZombies\\assets\\scripts\\plantgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\plantgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|D:\\Unity_Learn\\game\\PlantsVsZombies\\assets\\scripts\\bowling\\bowlinggameplantslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bowling\\bowlinggameplantslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|D:\\Unity_Learn\\game\\PlantsVsZombies\\assets\\scripts\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -35,31 +51,23 @@
       "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\plantslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|d:\\unity_learn\\game\\plantsvszombies\\assets\\potatomine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|D:\\Unity_Learn\\game\\PlantsVsZombies\\assets\\potatomine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\potatomine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|d:\\unity_learn\\game\\plantsvszombies\\assets\\scripts\\plant\\jalapeno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|D:\\Unity_Learn\\game\\PlantsVsZombies\\assets\\scripts\\plant\\jalapeno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\plant\\jalapeno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|d:\\unity_learn\\game\\plantsvszombies\\assets\\scripts\\tutorialgamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|D:\\Unity_Learn\\game\\PlantsVsZombies\\assets\\scripts\\tutorialgamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tutorialgamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|d:\\unity_learn\\game\\plantsvszombies\\assets\\scripts\\tutorialplantslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tutorialplantslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|d:\\unity_learn\\game\\plantsvszombies\\assets\\scripts\\loadsavedlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\loadsavedlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|D:\\Unity_Learn\\game\\PlantsVsZombies\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|d:\\unity_learn\\game\\plantsvszombies\\assets\\scripts\\bowling\\bowlinggamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|D:\\Unity_Learn\\game\\PlantsVsZombies\\assets\\scripts\\bowling\\bowlinggamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDA0CD38-E606-C898-5AD8-7CC833D699E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bowling\\bowlinggamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -82,137 +90,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BowlingExplode.cs",
-              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\BowlingExplode.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\BowlingExplode.cs",
-              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\BowlingExplode.cs",
-              "RelativeToolTip": "Assets\\Scripts\\BowlingExplode.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAnwCYAAAAoAAAA",
+              "DocumentIndex": 0,
+              "Title": "NewGame.cs",
+              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\NewGame.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NewGame.cs",
+              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\NewGame.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NewGame.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T10:18:56.656Z",
+              "WhenOpened": "2024-07-21T13:01:05.463Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BowlingWallnut.cs",
-              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Bowling\\BowlingWallnut.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Bowling\\BowlingWallnut.cs",
-              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Bowling\\BowlingWallnut.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Bowling\\BowlingWallnut.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwEEAAAAwAAAA",
+              "Title": "MenuManager.cs",
+              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\MenuManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MenuManager.cs",
+              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\MenuManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MenuManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T10:14:41.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BowlingGamePlantSlot.cs",
-              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Bowling\\BowlingGamePlantSlot.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Bowling\\BowlingGamePlantSlot.cs",
-              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Bowling\\BowlingGamePlantSlot.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Bowling\\BowlingGamePlantSlot.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAQwCMAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T06:38:03.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlantGenerator.cs",
-              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\PlantGenerator.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlantGenerator.cs",
-              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\PlantGenerator.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlantGenerator.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAqwDsAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T06:37:38.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PotatoMine.cs",
-              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\PotatoMine.cs",
-              "RelativeDocumentMoniker": "Assets\\PotatoMine.cs",
-              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\PotatoMine.cs",
-              "RelativeToolTip": "Assets\\PotatoMine.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwCgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T09:36:43.42Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Jalapeno.cs",
-              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Plant\\Jalapeno.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Plant\\Jalapeno.cs",
-              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Plant\\Jalapeno.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Plant\\Jalapeno.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBgAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T09:37:02.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TutorialPlantSlot.cs",
-              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\TutorialPlantSlot.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TutorialPlantSlot.cs",
-              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\TutorialPlantSlot.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TutorialPlantSlot.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwDQAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T08:39:00.607Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TutorialGameManager.cs",
-              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\TutorialGameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TutorialGameManager.cs",
-              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\TutorialGameManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TutorialGameManager.cs",
-              "ViewState": "AQIAAEcBAAAAAAAAAAAiwFoBAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T08:38:44.031Z",
+              "WhenOpened": "2024-07-21T12:54:34.625Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Zombie.cs",
-              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Zombie.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Zombie.cs",
-              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Zombie.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Zombie.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAnwGoAAAAQAAAA",
+              "Title": "BowlingExplode.cs",
+              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\BowlingExplode.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BowlingExplode.cs",
+              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\BowlingExplode.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BowlingExplode.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAewBgAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T08:17:57.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-21T10:18:56.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BowlingWallnut.cs",
+              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Bowling\\BowlingWallnut.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Bowling\\BowlingWallnut.cs",
+              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Bowling\\BowlingWallnut.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Bowling\\BowlingWallnut.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwBsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T10:14:41.963Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "PlantSlot.cs",
-              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\PlantSlot.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlantSlot.cs",
-              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\PlantSlot.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlantSlot.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAA5wDUAAAAlAAAA",
+              "Title": "PlantGenerator.cs",
+              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\PlantGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlantGenerator.cs",
+              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\PlantGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlantGenerator.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAA6wDsAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T03:47:53.081Z",
+              "WhenOpened": "2024-07-21T06:37:38.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoadSavedLevel.cs",
+              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\LoadSavedLevel.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LoadSavedLevel.cs",
+              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\LoadSavedLevel.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LoadSavedLevel.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAqwEUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T08:06:49.906Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ZombieBoss.cs",
+              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\ZombieBoss.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ZombieBoss.cs",
+              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\ZombieBoss.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ZombieBoss.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T12:08:01.939Z"
             },
             {
               "$type": "Document",
@@ -222,27 +187,85 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AQIAAM8AAAAAAAAAAAAuwOUAAAAVAAAA",
+              "ViewState": "AQIAABIBAAAAAAAAAAAwwBkBAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T03:57:59.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-21T12:34:15.885Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "LoadSavedLevel.cs",
-              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\LoadSavedLevel.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\LoadSavedLevel.cs",
-              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\LoadSavedLevel.cs",
-              "RelativeToolTip": "Assets\\Scripts\\LoadSavedLevel.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAawCwAAAAIAAAA",
+              "Title": "PotatoMine.cs",
+              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\PotatoMine.cs",
+              "RelativeDocumentMoniker": "Assets\\PotatoMine.cs",
+              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\PotatoMine.cs",
+              "RelativeToolTip": "Assets\\PotatoMine.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwCgAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T08:06:49.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-21T09:36:43.42Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
+              "Title": "Jalapeno.cs",
+              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Plant\\Jalapeno.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Plant\\Jalapeno.cs",
+              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Plant\\Jalapeno.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Plant\\Jalapeno.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T09:37:02.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BowlingGamePlantSlot.cs",
+              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Bowling\\BowlingGamePlantSlot.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Bowling\\BowlingGamePlantSlot.cs",
+              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Bowling\\BowlingGamePlantSlot.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Bowling\\BowlingGamePlantSlot.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwCMAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T06:38:03.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TutorialGameManager.cs",
+              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\TutorialGameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TutorialGameManager.cs",
+              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\TutorialGameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TutorialGameManager.cs",
+              "ViewState": "AQIAAEcBAAAAAAAAAAAiwFoBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T08:38:44.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Zombie.cs",
+              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Zombie.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Zombie.cs",
+              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Zombie.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Zombie.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAnwGoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T08:17:57.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PlantSlot.cs",
+              "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\PlantSlot.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlantSlot.cs",
+              "ToolTip": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\PlantSlot.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlantSlot.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAA5wDUAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T03:47:53.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ZombieSpawner.cs",
               "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\ZombieSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ZombieSpawner.cs",
@@ -250,12 +273,11 @@
               "RelativeToolTip": "Assets\\Scripts\\ZombieSpawner.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAnwBEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T08:42:44.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-14T08:42:44.017Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "BowlingGameManager.cs",
               "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Bowling\\BowlingGameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bowling\\BowlingGameManager.cs",
@@ -263,12 +285,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Bowling\\BowlingGameManager.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAArwBgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T05:46:17.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-21T05:46:17.72Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Plant.cs",
               "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Plant.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Plant.cs",
@@ -276,12 +297,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Plant.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAQwBEAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T03:34:58.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-14T03:34:58.104Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Bullet.cs",
               "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
@@ -289,12 +309,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAAAjwCUAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T03:45:47.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-14T03:45:47.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "PickPlant.cs",
               "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\PickPlant.cs",
               "RelativeDocumentMoniker": "Assets\\PickPlant.cs",
@@ -306,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "ButtonScript.cs",
               "DocumentMoniker": "D:\\Unity_Learn\\game\\PlantsVsZombies\\Assets\\Scripts\\ButtonScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonScript.cs",
