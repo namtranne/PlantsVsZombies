@@ -25,6 +25,7 @@ public class BowlingWallnut : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.isPaused) return;
         // Rotate the object around its center (local z-axis) at the defined speed
         transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
 

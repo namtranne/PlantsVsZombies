@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
     public GameObject plant;
     public GameObject currentSelectedSlot;
 
+    public Button nextLevelButton;
+
     public float gameTime { get; private set; }
 
 
@@ -90,6 +92,9 @@ public class GameManager : MonoBehaviour
             backgroundSource.loop = true;
             backgroundSource.Play();
         }
+
+        // Add onClick event for nextLevel button
+        nextLevelButton.onClick.AddListener(HandleTurnToNextLevel);
     }
 
     public void ChoosePlant(GameObject plant, Sprite sprite, int price)
@@ -217,20 +222,12 @@ public class GameManager : MonoBehaviour
         // Wait for a few seconds
         yield return new WaitForSeconds(3f);
         // Load the next level
-        if (SceneManager.GetActiveScene().buildIndex >= 2)
-        {
-            if (level % 5 == 0)
-                SceneManager.LoadScene(4);
-            else SceneManager.LoadScene(3);
-            yield return null;
-        }
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        HandleTurnToNextLevel();
     }
 
     public void Win()
     {
         isPaused = true;
-        level++;
         StartCoroutine(ShowWinningOverlay());
         isPaused = false;
     }
@@ -274,11 +271,22 @@ public class GameManager : MonoBehaviour
         return suns >= cost;
     }
 
-
-
     public void SpendSun(int cost)
     {
         suns -= cost;
         sunText.text = suns.ToString();
+    }
+
+    public void HandleTurnToNextLevel() 
+    {
+        level++;
+        if (SceneManager.GetActiveScene().buildIndex >= 2)
+        {
+            if (level % 5 == 0)
+                SceneManager.LoadScene(4);
+            else SceneManager.LoadScene(3);
+            return;
+        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
