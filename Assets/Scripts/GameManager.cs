@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     public static bool isSelecting = true;
     public static bool isPaused = true;
-    public static int level = 2;
+    public static int level = 1;
 
     public GameObject winningOverlayPanel;
     public TextMeshProUGUI winningMessageText;
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     public GameObject currentSelectedSlot;
 
     public Button nextLevelButton;
+    // public static GameManager instance;
 
     public float gameTime { get; private set; }
 
@@ -60,6 +61,21 @@ public class GameManager : MonoBehaviour
     {
         isPaused = true;
     }
+
+    // void Awake()
+    // {
+    //     // Implementing singleton pattern
+    //     if (instance == null)
+    //     {
+    //         instance = this;
+    //         Start();
+    //         DontDestroyOnLoad(gameObject); 
+    //     }
+    //     else
+    //     {
+    //         Destroy(gameObject);
+    //     }
+    // }
 
     private void Start()
     {
@@ -94,7 +110,8 @@ public class GameManager : MonoBehaviour
         }
 
         // Add onClick event for nextLevel button
-        nextLevelButton.onClick.AddListener(HandleTurnToNextLevel);
+        if(nextLevelButton != null)
+            nextLevelButton.onClick.AddListener(HandleTurnToNextLevel);
     }
 
     public void ChoosePlant(GameObject plant, Sprite sprite, int price)
@@ -113,10 +130,8 @@ public class GameManager : MonoBehaviour
 
         if (isPaused) return;
 
-        if (!isBowling) sunText.text = suns.ToString();
+        if (!isBowling && sunText != null) sunText.text = suns.ToString();
 
-        Debug.Log("isDragging" + isDragging);
-        Debug.Log("currentPlant" + currentPlant);
         if (isDragging && currentPlant)
         {
             Debug.Log("abc");
@@ -163,7 +178,7 @@ public class GameManager : MonoBehaviour
         RaycastHit2D sunHit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, sunMask);
         if (sunHit.collider)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && sunSource != null)
             {
                 sunSource.pitch = UnityEngine.Random.Range(.9f, 1.1f);
                 sunSource.volume = soundVolume;

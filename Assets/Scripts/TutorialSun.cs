@@ -14,6 +14,9 @@ public class TutorialSun : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if(GameManager.isPaused)
+            return;
+            
         if (transform.position.y > dropToYPos)
         {
             transform.position -= new Vector3(0, speed * Time.fixedDeltaTime, 0);

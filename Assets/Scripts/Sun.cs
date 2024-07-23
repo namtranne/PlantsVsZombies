@@ -46,6 +46,9 @@ public class Sun : MonoBehaviour
 
     private IEnumerator SelfDestruct()
     {
+        if(GameManager.isPaused)
+            yield return null;
+        
         yield return new WaitForSeconds(lifetimeDuration);
         Destroy(gameObject);
     }

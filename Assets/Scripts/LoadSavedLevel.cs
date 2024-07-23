@@ -16,13 +16,6 @@ public class LoadSavedLevel : MonoBehaviour
         // Path where the current level is saved
         filePath = Application.dataPath + "/currentLevel.txt";
 
-        // Check if the file exists
-        if (!File.Exists(filePath))
-        {
-            // Create the file and write "1" to it
-            File.WriteAllText(filePath, "1");
-        }
-
         // Add a listener to the continue button
         if (continueButton != null)
         {
@@ -43,13 +36,13 @@ public class LoadSavedLevel : MonoBehaviour
         }
         else
         {
+            levelText.text = "";
             Debug.LogError("Saved level file not found");
         }
     }
 
     public void ContinueGame()
     {
-        Debug.Log("Check");
         if (File.Exists(filePath))
         {
             string savedLevel = File.ReadAllText(filePath);

@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 using Vector3 = UnityEngine.Vector3;
 using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
+using UnityEngine.UI;
 
 public class TutorialGameManager : MonoBehaviour
 {
@@ -52,6 +53,9 @@ public class TutorialGameManager : MonoBehaviour
     void Update()
     {
         sunText.text = suns.ToString();
+        if (GameManager.isPaused)
+            return;
+        
         HandleTutorialSteps();
         HandleDragging();
         HandleSunCollection();
@@ -110,8 +114,9 @@ public class TutorialGameManager : MonoBehaviour
     {
         GameObject sunObject = GameObject.Find("TutorialSun(Clone)");
         if (sunObject != null)
-        {
+        {   
             TutorialSun sun = sunObject.GetComponent<TutorialSun>();
+
             if (sun.transform.position.y <= sun.dropToYPos)
             {
                 ShowHandAndChat(sunObject.transform.position + new Vector3(0.55f, -0.55f, 0),
@@ -350,12 +355,18 @@ public class TutorialGameManager : MonoBehaviour
 
     public void SpawnSun()
     {
+        if(GameManager.isPaused)
+            return;
+        
         GameObject mySun = Instantiate(sunObject, new Vector3(Random.Range(-8f, 8f), 6, 0), Quaternion.identity);
         mySun.GetComponent<TutorialSun>().dropToYPos = Random.Range(0.0f, -1.0f);
     }
 
     public void SpawnZombie()
     {
+        if (GameManager.isPaused)
+            return;
+        
         Instantiate(zombie, spawnPoint.position, Quaternion.identity);
     }
 }
