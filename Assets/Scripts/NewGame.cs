@@ -23,6 +23,7 @@ public class NewGame : MonoBehaviour
     public void NewGameAction()
     {
         File.WriteAllText(filePath, "1");
+        GameManager.level = 1;
         SceneManager.LoadScene(1);
     }
 }

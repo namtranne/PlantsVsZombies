@@ -345,6 +345,7 @@ public class TutorialGameManager : MonoBehaviour
 
     public void Win()
     {
+        GameManager.level++;
         if (SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(0);

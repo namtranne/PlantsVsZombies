@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -45,6 +46,8 @@ public class GameManager : MonoBehaviour
     public bool isBowling;
     public GameObject plant;
     public GameObject currentSelectedSlot;
+
+    public GameObject backgroundObject;
 
     public Button nextLevelButton;
     // public static GameManager instance;
@@ -295,6 +298,10 @@ public class GameManager : MonoBehaviour
     public void HandleTurnToNextLevel() 
     {
         level++;
+        string filePath = Application.dataPath + "/currentLevel.txt";
+        string currentLevel = level.ToString();
+        File.WriteAllText(filePath, currentLevel);
+
         if (SceneManager.GetActiveScene().buildIndex >= 2)
         {
             if (level % 5 == 0)

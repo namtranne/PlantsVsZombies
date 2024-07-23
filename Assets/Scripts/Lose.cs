@@ -10,7 +10,6 @@ public class Lose : MonoBehaviour
     private bool hasLost;
     public AudioClip loseMusic;
     public AudioClip scream;
-    public AudioSource music;
     private AudioSource source;
 
     private void Start()
@@ -25,7 +24,6 @@ public class Lose : MonoBehaviour
             hasLost = true;
             source.PlayOneShot(loseMusic);
             source.PlayOneShot(scream);
-            music.Stop();
             animator.Play("death");
             Invoke("RestartScene", 6);
         }
