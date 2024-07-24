@@ -133,7 +133,7 @@ public class GameManager : MonoBehaviour
 
         if (isPaused) return;
 
-        if (!isBowling && sunText != null) sunText.text = suns.ToString();
+        if (!isBowling) sunText.text = suns.ToString();
 
         if (isDragging && currentPlant)
         {

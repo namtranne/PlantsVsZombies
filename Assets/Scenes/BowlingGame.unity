@@ -303,7 +303,6 @@ MonoBehaviour:
   animator: {fileID: 1632613051}
   loseMusic: {fileID: 8300000, guid: e9f0fb5dece52e340bed03652005b215, type: 3}
   scream: {fileID: 8300000, guid: f116d7e83b46ab648813d522d7516bca, type: 3}
-  music: {fileID: 0}
 --- !u!61 &54494019
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2051,6 +2050,7 @@ MonoBehaviour:
   isBowling: 1
   plant: {fileID: 3359103422527997184, guid: dba8715485a82481aa5df40775177ad3, type: 3}
   currentSelectedSlot: {fileID: 0}
+  backgroundObject: {fileID: 0}
   nextLevelButton: {fileID: 727925420}
 --- !u!4 &602984333
 Transform:
@@ -7461,12 +7461,20 @@ MonoBehaviour:
   - {fileID: 186261519}
   - {fileID: 1617260419}
   zombie: {fileID: 4419244606155348726, guid: 9695c1559407b49369d7adf18359944d, type: 3}
+  zombieBoss: {fileID: 4696525964551993730, guid: 40f18d118adc64ebbb5ffa3f5e58a771, type: 3}
   zombieTypes:
   - type: {fileID: 11400000, guid: 9ea769f8add3d5d489ca44e03f04d0c7, type: 2}
     probability: 4
   - type: {fileID: 11400000, guid: 5662c5005345513408ccb549a06eb1ff, type: 2}
     probability: 2
   - type: {fileID: 11400000, guid: 77e010ec1e1977a468e059b907e36598, type: 2}
+    probability: 0
+  zombieBossTypes:
+  - type: {fileID: 11400000, guid: 14fbd8889ceb54226a33c9209ef8c154, type: 2}
+    probability: 2
+  - type: {fileID: 11400000, guid: 19a78568c071947ff94964897fcfa0e8, type: 2}
+    probability: 4
+  - type: {fileID: 11400000, guid: 4f3520d5abc0643f3a68594d34b76f72, type: 2}
     probability: 0
   zombieMax: 20
   zombiesSpawned: 0

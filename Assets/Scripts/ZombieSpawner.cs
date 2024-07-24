@@ -7,8 +7,10 @@ public class ZombieSpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject zombie;
+    public GameObject zombieBoss;
     private int sortingOrder = 2;
     public ZombieTypeProb[] zombieTypes;
+    public ZombieTypeProb[] zombieBossTypes;
 
     public int zombieMax;
     public int zombiesSpawned;
@@ -72,10 +74,14 @@ public class ZombieSpawner : MonoBehaviour
         if (percentage >= .8f) { 
             Debug.Log("Stopp");
             CancelInvoke("SpawnZombie");
-            for (int i = zombiesSpawned; i < zombieMax; i++)
+            for (int i = zombiesSpawned; i < zombieMax - 1; i++)
             {
-                InstantiateNewZombie(4);
+                InstantiateNewZombie(5);
             }
+            if (GameManager.level >= 3)
+            {
+                InstantiateBossZombie();
+            } else InstantiateNewZombie(5);
         }
         else if (zombiesSpawned <= 6)
         {
@@ -136,6 +142,16 @@ public class ZombieSpawner : MonoBehaviour
         myZombie.GetComponent<Zombie>().xBoost = xBoost;
         myZombie.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
     }
+
+    void InstantiateBossZombie()
+    {
+        int spawnPosition = Random.Range(0, spawnPoints.Length);
+        GameObject myZombie = Instantiate(zombieBoss, spawnPoints[spawnPosition].position, Quaternion.identity);
+        zombiesSpawned++;
+        progressBar.value = zombiesSpawned;
+        myZombie.GetComponent<ZombieBoss>().type = SelectZombieBossType();
+        myZombie.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
+    }
     private ZombieTypes SelectZombieType()
     {
         float randomValue = Random.value;
@@ -149,6 +165,20 @@ public class ZombieSpawner : MonoBehaviour
         }
 
         return zombieTypes[zombieTypes.Length - 1].type; // Fallback to the last type
+    }
+    private ZombieTypes SelectZombieBossType()
+    {
+        float randomValue = Random.value;
+
+        foreach (ZombieTypeProb zom in zombieBossTypes)
+        {
+            if (randomValue <= zom.probability)
+            {
+                return zom.type;
+            }
+        }
+
+        return zombieBossTypes[zombieBossTypes.Length - 1].type; // Fallback to the last type
     }
 }
 [System.Serializable]

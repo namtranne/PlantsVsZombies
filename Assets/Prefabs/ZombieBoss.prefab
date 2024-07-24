@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6482259368943744792}
   - component: {fileID: 1171689567500855817}
   - component: {fileID: 6633672840948599011}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ZombieBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ MonoBehaviour:
   range: 0
   plantMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   type: {fileID: 11400000, guid: 14fbd8889ceb54226a33c9209ef8c154, type: 2}
   hitClip: {fileID: 0}
   eatSource: {fileID: 0}
@@ -157,13 +157,13 @@ MonoBehaviour:
   frozenTrap: {fileID: 0}
   activeFrozenTrap: {fileID: 0}
   boomAnimation: {fileID: 0}
+  xBoost: 1
   currentTile: {fileID: 0}
   targetTile: {fileID: 0}
   ultimateAudioSource: {fileID: 0}
   teleAudioSource: {fileID: 0}
   guardAudioSource: {fileID: 0}
   animator: {fileID: 0}
-  animationController: {fileID: 0}
   newAvatar: {fileID: 0}
   ultimateEffect: {fileID: 0}
   portrait: {fileID: 0}

@@ -59,6 +59,7 @@ public class ZombieBoss : Zombie
         chat = type.chat;
         eatSource = type.attackAudioSource;
 
+        gridObject = GameObject.Find("Grid");
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
         tiles = new GameObject[gridObject.transform.childCount];
         for (int i = 0; i < gridObject.transform.childCount; i++)
@@ -69,7 +70,8 @@ public class ZombieBoss : Zombie
     
     private void Update()
     {
-        if(curAnimation != "walking") {
+        if (GameManager.isPaused) return;
+        if (curAnimation != "walking") {
             return;
         }
         RaycastHit2D tileHit = Physics2D.Raycast(transform.position, Vector2.left, range, tileMask);
@@ -113,7 +115,8 @@ public class ZombieBoss : Zombie
     // Update is called once per frame
     private void FixedUpdate()
     {
-        switch(curAnimation) {
+        if (GameManager.isPaused) return;
+        switch (curAnimation) {
             case "walking": 
                 transform.position -= new Vector3(speed, 0, 0);
                 break;
@@ -198,10 +201,15 @@ public class ZombieBoss : Zombie
 
     void Dash() {
         int tileIndex = Array.IndexOf(tiles, currentTile);
+        if (tileIndex < 0) {
+            curAnimation = "walking";
+            return; 
+        }
         if(tileIndex % numColumns ==0) {
             ResetState();
             return;
         }
+        Debug.Log("log" + tileIndex);
         targetTile = tiles[tileIndex-1];
         animator.Play("Tele");
         Instantiate(teleAudioSource);
@@ -253,8 +261,15 @@ public class ZombieBoss : Zombie
 
     public override void Hit(float damage, bool freeze)
     {
+        health -= damage;
         if(freeze) Freeze();
-        if(curAnimation == "walking")
+        if (health <= 0 && curAnimation != "death")
+        {
+            curAnimation = "death";
+            GameObject.Find("GameManager").GetComponent<GameManager>().Win();
+            Destroy(gameObject);
+        }
+        if (curAnimation == "walking")
            curAnimation = "guard";
     }
 

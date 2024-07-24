@@ -578,7 +578,6 @@ MonoBehaviour:
   animator: {fileID: 1632613051}
   loseMusic: {fileID: 8300000, guid: e9f0fb5dece52e340bed03652005b215, type: 3}
   scream: {fileID: 8300000, guid: f116d7e83b46ab648813d522d7516bca, type: 3}
-  music: {fileID: 0}
 --- !u!61 &54494019
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14079,9 +14078,11 @@ MonoBehaviour:
   - {fileID: 1507519266}
   - {fileID: 186261519}
   zombie: {fileID: 4419244606155348726, guid: 9695c1559407b49369d7adf18359944d, type: 3}
+  zombieBoss: {fileID: 0}
   zombieTypes:
   - type: {fileID: 11400000, guid: 9ea769f8add3d5d489ca44e03f04d0c7, type: 2}
     probability: 1
+  zombieBossTypes: []
   zombieMax: 12
   zombiesSpawned: 0
   zombiesKilled: 0
@@ -16145,7 +16146,7 @@ MonoBehaviour:
   tileMask:
     serializedVersion: 2
     m_Bits: 64
-  suns: 1000
+  suns: 100
   sunText: {fileID: 1888940786}
   sunMask:
     serializedVersion: 2
@@ -16163,6 +16164,7 @@ MonoBehaviour:
   isBowling: 0
   plant: {fileID: 0}
   currentSelectedSlot: {fileID: 0}
+  backgroundObject: {fileID: 0}
   nextLevelButton: {fileID: 388425790}
 --- !u!82 &1893705570
 AudioSource:
